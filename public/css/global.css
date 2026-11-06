@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+
+    /*CORES NAVBAR:
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+background: linear-gradient(90deg, rgba(201, 162, 39, 0.22) 0%, rgba(201, 162, 39, 0.00) 100%), rgba(20, 40, 75, 0.72);
+box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.20);
+backdrop-filter: blur(12px);
+    */
+    --border-bottom: rgba(255, 255, 255, 0.12);
+    --start-gradient: rgba(201, 162, 39, 0.22);
+    --center-gradient: rgba(201, 162, 39, 0.00);
+    --end-gradient: rgba(20, 40, 75, 0.72);
+    --sombra: rgba(0, 0, 0, 0.20);
+
+
+    /*CONFIGURAÇÂO GERAL: */
+    --Marfim: #FAF6EC; /*Fundo geral das telas públicas*/
+    --Azul-profundo: #14284B Menu; /*do topo, botões principais, títulos*/
+    --Dourado-suave: #C9A227; /*Linhas, detalhes, bordas de botões, pontos do carrossel*/
+    --Cinza-escuro: #222222; /*Texto corrido*/
+    --Cinza-medio: #6B6B6B; /*Textos de apoio e legendas*/
+    --Branco: #FFFFFF; /*Cartões, campos de formulário, texto sobre fundo escuro*/
+    --erro: #B3261E; /*Mensagens de erro nos formulários*/
+    --sucesso: #2E7D32; /*Mensagens de confirmação*/
+
+    /* Cores de Nossa Senhora Aparecida */
+    --Azul-profundo: #14284B; /* Menu do topo, botões principais, títulos*/
+    --Dourado-suave: #C9A227;/* Linhas, detalhes, bordas de botões, pontos do carrossel*/
+    --Azul-claro: #E6ECF5; /*Fundo de seções de apoio*/
+    --Branco: #FFFFFF; /*Cartões, campos de formulário, texto sobre fundo escuro*/
+
+    /* Cores de São Bento */
+    --Marrom-cafe: #4A3022; /*Cor principal faixa de abertura, títulos, botões*/
+    --Bege-areia: #E8D9BF; /*Fundo da página e das seções*/
+    --Marrom-claro: #8B6B4A; /*Linhas e detalhes*/
+    --Branco: #FFFFFF; /*Cartões, campos de formulário, texto sobre fundo escuro*/
+
+    /* Cores de São Paulo Apóstolo */
+    --Vermelho-vinho: #7A1F2B; /*Cor principal faixa de abertura, títulos, botões*/
+    --Verde-musgo: #2F4A3A; /*Somente detalhes e títulos de seção*/
+    --Rosa-claro: #F6E9EA; /*Fundo de seções de apoio*/
+    --Branco: #FFFFFF; /*Cartões, campos de formulário, texto sobre fundo escuro*/
+
+    /*
+Título principal (H1) 56 px
+Título de seção (H2) 40 px
+Subtítulo (H3) 28 px
+Texto corrido 18 px
+Botões e menu 16 px
+Legendas 14 px
+*/
+    /* Fontes Utilizadas */
+    --Titulos-principais: "Cormorant Garamond", Bold, Playfair-Display;
+    --Subtitulos: "Cormorant Garamond", SemiBold, Playfair Display;
+    --Texto-corrido: "Lato", regular, open-sans;
+    --Botoes-e-menu: "Lato", Bold, Open-Sans;
+    --Legendas-e-avisos: "Lato", Regular, Open-Sans;
+    /* Espaçamento */
+    --horizontal-margin: 5%;
+}
+
+/* Reset e Configurações Globais Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--Titulos-principais);
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--color-blue-dark);
+    color: var(--white);
+     border-color: var(--Dourado-suave);
+    border-radius: 0.5rem;
+    padding: 0.87rem 1.75rem;
+    font-family: var(--font-primary);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: as;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: scale(0.98);
+}

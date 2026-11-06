@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Devoc-DataTech | Página Inicial</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/navbar_azul.css">
+    <link rel="stylesheet" href="/public/login.html">
+    <link rel="stylesheet" href="/public/simulador.html">
+    <script
+      src="https://kit.fontawesome.com/79924d81b1.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/public/index.html" onclick="voltar_inicio()">
+      <img
+        class="logo"
+        src="../public/assets/icon/logo_azul.png"
+        alt="Devoc-DataTech"
+      />
+      </a>
+      <div class="container_butoes">
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
+          <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+          <li><a href="./src/pages/planos.html" class="linha">Quiz</a></li>
+        </ul>
+      </nav>
+        |
+        <a href="/public/login.html">
+          <button class="entrar btn-primary cursor">
+            <i
+              class="fa-solid fa-arrow-right-to-bracket icon"
+            
+            ></i>
+            Entrar
+          </button>
+        </a>
+        <a href="/public/cadastro.html">
+          <button class="cadastro btn-primary cursor">Cadastre-se</button>
+        </a>
+    </header>
+
+</body>
+<script>
+  function voltar_inicio() {
+    evento.preventDefault(); // Impede o redirecionamento  do link
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // rolagem suave
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,130 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Branco);
+
+
+
+}
+
+.logo {
+    margin-left: 2rem;
+    width: 8.5rem;
+    height: 2.5rem;
+}
+
+nav,
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.5;
+    align-items: center;
+    max-width: 100rem;
+    gap: 1.5rem;
+
+
+}
+
+.container_butoes {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+li,
+a {
+    font-size: 0.7rem;
+    flex-grow: 1rem;
+    color: var(--Azul-profundo);
+    font-family: var(--Botoes-e-menu);
+    font-weight: 600;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+.linha {
+    font-size: 0.7rem;
+    color: var(--Azul-profundo);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.selecionado {
+    color: var(--Azul-profundo);
+    border-bottom: 3px solid var(--Dourado-suave);
+}
+
+.linha::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--Dourado-suave);
+    transition: width 0.3s ease-in-out;
+}
+
+.linha:hover::after {
+    width: 100%;
+}
+
+
+.icon:hover,
+.linha:hover,
+li:hover,
+.entrar:hover {
+    color: var(--Dourado-suave);
+}
+
+.entrar {
+    color: var(--Azul-profundo);
+    background-color: transparent;
+    border: none;
+    font-size: 0.7rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+
+    transition: all ease 0.1s;
+}
+
+.entrar .icon {
+    width: 0.6rem;
+    height: 0.8rem;
+    flex-shrink: 0;
+    color: var(--Azul-profundo);
+    transition: all ease 0.1s;
+}
+
+.entrar:hover .icon {
+    color: var(--Dourado-suave);
+}
+
+.cadastro {
+    background-color: var(--Branco);
+    color: var(--Azul-profundo);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--Dourado-suave);
+    transition: all ease 0.3s;
+}
+
+.cadastro:hover {
+    background: var(--Dourado-suave);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.50);
+    border: var(--Branco);
+    color: var(--Azul-profundo);
+    font-weight: 900;
+}
