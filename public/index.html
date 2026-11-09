@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Devoc-DataTech | Página Inicial</title>
+  <title>Devoc-DataTech | Página Inicial</title>
 
-    <script src="./js/sessao.js"></script>
+  <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
-    <link rel="stylesheet" href="../public/css/index.css">
-    <link rel="stylesheet" href="../public/css/navbar_azul.css">
-    <link rel="stylesheet" href="/public/login.html">
-    <link rel="stylesheet" href="/public/simulador.html">
-    <script
-      src="https://kit.fontawesome.com/79924d81b1.js"
-      crossorigin="anonymous"
-    ></script>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
+  <link rel="stylesheet" href="../public/css/index.css">
+  <link rel="stylesheet" href="../public/css/navbar_azul.css">
+  <link rel="stylesheet" href="../public/css/footer_azul.css">
+  <link rel="stylesheet" href="/public/login.html">
+  <link rel="stylesheet" href="/public/simulador.html">
+  <link rel="stylesheet" href="/public/são_bento.html">
+  <link rel="stylesheet" href="/public/são_paulo.html">
+  <link rel="stylesheet" href="/public/aparecida.html">
+  <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="/public/index.html" onclick="voltar_inicio()">
-      <img
-        class="logo"
-        src="../public/assets/icon/logo_azul.png"
-        alt="Devoc-DataTech"
-      />
-      </a>
-      <div class="container_butoes">
+      <img class="logo" src="../public/assets/icon/logo_azul.png" alt="Devoc-DataTech" />
+    </a>
+    <div class="container_butoes">
+  
       <nav>
         <ul>
           <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
@@ -38,23 +37,136 @@
           <li><a href="./src/pages/planos.html" class="linha">Quiz</a></li>
         </ul>
       </nav>
-        |
-        <a href="/public/login.html">
-          <button class="entrar btn-primary cursor">
-            <i
-              class="fa-solid fa-arrow-right-to-bracket icon"
-            
-            ></i>
-            Entrar
-          </button>
-        </a>
-        <a href="/public/cadastro.html">
-          <button class="cadastro btn-primary cursor">Cadastre-se</button>
-        </a>
-    </header>
+      |
+      <a href="/public/login.html">
+        <button class="entrar">
+          <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
+          Entrar
+        </button>
+      </a>
+      <a href="/public/cadastro.html">
+        <button class="cadastro">Cadastre-se</button>
+      </a>
+      </div>
+  </header>
+  <section class="tela-inicial">
+    <div class="conteiner-alto">
+      <h1 class="titulo">
+        <br> Histórias que acolhem.
+        <br>Uma fé que nos aproxima.
+      </h1>
+      <a href="/public/simulador.html">
+        <button class="butao">Conheça os Santos</button>
+      </a>
+    </div>
+  </section>
+  <section class="section-carrosel">
+
+    <div class="conteiner-baixo">
+      <span class="subtitulo">ENCONTROS DE FÉ</span>
+      <h1 class="titulo">Conheça os Santos</h1>
+    </div>
+
+    <div class="janela">
+      <div class="fila" id="fila">
+        <article class="slide">
+          <a href="/public/são_bento.html">
+          <img src="../public/assets/imgs/sao-bento.jpg" alt="São bento">
+          </a>
+          <p class="subtitulo"><i class="fa-solid fa-minus"></i> Fé que se vive no cotidiano <i class="fa-solid fa-minus"></i></p>
+          <h2 class="santo">São bento</h2>
+          <p class="frase">Na oração e no trabalho, um caminho de paz</p>
+          <a href="/public/são_bento.html">
+          <span class="historia">Conheça a história <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </article>
+        
+        <article class="slide">
+        <a href="/public/são_paulo.html">
+          <img src="../public/assets/imgs/_122941054_0.jpg" alt="São bento">
+          </a>
+          <p class="subtitulo"><i class="fa-solid fa-minus"></i> A coragem de recomeçar <i class="fa-solid fa-minus"></i></p>
+          <h2 class="santo">São Paulo Apóstolo</h2>
+          <p class="frase">Todo caminho pode se tornar um recomeço</p>
+          <a href="/public/são_paulo.html">
+          <span class="historia">Conheça a história <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </article>
+
+        <article class="slide">
+        <a href="/public/aparecida.html">
+          <img src="../public/assets/imgs/slides03.png" alt="São bento">
+          </a>
+          <p class="subtitulo"><i class="fa-solid fa-minus"></i> Rainha e Padroeira do Brasil <i class="fa-solid fa-minus"></i></p>
+          <p></p>
+          <h2 class="santo">Nossa Senhora Aparecida</h2>
+          <p class="frase">Um manto de esperança sobre nossa história</p>
+          <a href="/public/aparecida.html">
+          <span class="historia">Conheça a história <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+    <div class="butoes">
+    <button class="butao-slider" id="alto"><i class="fa-solid fa-up-long"></i></button>
+    <div class="pontos" id="pontos"></div>
+    <button class="butao-slider" id="baixo"><i class="fa-solid fa-down-long"></i></button>
+    <div class="contador" id="contador"></div>
+  </div>
+
+</section>
+<div class="frase-final">
+  <h1 class="titulo">Que a fé ilumine os pequenos passos de cada dia.</h1>
+</div>
+<footer class="footer">
+  
+    
+    <a href="/public/index.html" onclick="voltar_inicio()">
+      <img class="imagem" src="../public/assets/icon/logo_branca.png" alt="Devoc-DataTech" />
+    </a>
+    
+  
+      
+          <p class="frase">Um espaço de história, oração e devoção.</p>
+          <p class="frase imagem">© 2026</p>
+     
+      
+  </footer>  
 
 </body>
 <script>
+  const fila = document.getElementById('fila');
+  const pontos = document.getElementById('pontos');
+  const total = fila.children.length;
+  let atual = 0;
+  
+
+  function passar(n) {
+    atual = (n + total) % total;
+    fila.style.transform = `translatey(-${atual * 100}%)`; 
+
+    [...pontos.children].forEach((p, i) => {
+      p.classList.toggle('ativo', i === atual)
+    });
+
+    document.getElementById('contador').textContent = String(atual + 1).padStart(2, '0')
+     + ' / ' + String(total).padStart(2, '0');
+
+  }
+
+  for (let i = 0; i < total; i++) {
+    const bolinha = document.createElement('button');
+    bolinha.className = 'ponto';
+    bolinha.onclick = () => passar(i);
+    pontos.appendChild(bolinha)
+  }
+
+  document.getElementById('alto').onclick = () => passar(atual -1);
+  document.getElementById('baixo').onclick = () => passar(atual +1);
+
+  passar(0);
+
   function voltar_inicio() {
     evento.preventDefault(); // Impede o redirecionamento  do link
     window.scrollTo({

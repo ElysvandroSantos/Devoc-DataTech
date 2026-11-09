@@ -19,7 +19,7 @@ backdrop-filter: blur(12px);
 
     /*CONFIGURAÇÂO GERAL: */
     --Marfim: #FAF6EC; /*Fundo geral das telas públicas*/
-    --Azul-profundo: #14284B Menu; /*do topo, botões principais, títulos*/
+    --Azul-profundo: #090333; /*Menu do topo, botões principais, títulos*/
     --Dourado-suave: #C9A227; /*Linhas, detalhes, bordas de botões, pontos do carrossel*/
     --Cinza-escuro: #222222; /*Texto corrido*/
     --Cinza-medio: #6B6B6B; /*Textos de apoio e legendas*/
@@ -28,8 +28,8 @@ backdrop-filter: blur(12px);
     --sucesso: #2E7D32; /*Mensagens de confirmação*/
 
     /* Cores de Nossa Senhora Aparecida */
-    --Azul-profundo: #14284B; /* Menu do topo, botões principais, títulos*/
-    --Dourado-suave: #C9A227;/* Linhas, detalhes, bordas de botões, pontos do carrossel*/
+    --Azul-profundo: #090333; /* Menu do topo, botões principais, títulos*/
+    --Dourado-suave: #C9A227; /* Linhas, detalhes, bordas de botões, pontos do carrossel*/
     --Azul-claro: #E6ECF5; /*Fundo de seções de apoio*/
     --Branco: #FFFFFF; /*Cartões, campos de formulário, texto sobre fundo escuro*/
 
@@ -73,7 +73,7 @@ Legendas 14 px
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--Titulos-principais);
 }
-
+/*
 button {
     cursor: pointer;
 }
@@ -114,8 +114,11 @@ button {
 .btn-primary:hover {
     background-color: as;
 }
-
-.btn-primary:active,
+*/
+/*
+.btn-ativar:active,
 .btn-secondary:active {
     transform: scale(0.98);
 }
+*/
+  

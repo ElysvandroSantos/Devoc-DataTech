@@ -1,6 +1,8 @@
 .navbar {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    position: absolute;
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
@@ -29,9 +31,10 @@ ul {
 }
 
 .container_butoes {
+    
     flex-direction: row;
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
 }
@@ -91,6 +94,7 @@ li:hover,
     background-color: transparent;
     border: none;
     font-size: 0.7rem;
+    font-family: var(--Botoes-e-menu);
     padding: 8px 14px;
     border-radius: 8px;
 
@@ -98,8 +102,7 @@ li:hover,
 }
 
 .entrar .icon {
-    width: 0.6rem;
-    height: 0.8rem;
+       font-size: 0.7rem;
     flex-shrink: 0;
     color: var(--Azul-profundo);
     transition: all ease 0.1s;
@@ -113,7 +116,8 @@ li:hover,
     background-color: var(--Branco);
     color: var(--Azul-profundo);
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: var(--Botoes-e-menu);
     padding: 0.5rem 0.8rem;
     border-radius: 1rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -122,9 +126,13 @@ li:hover,
 }
 
 .cadastro:hover {
-    background: var(--Dourado-suave);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.50);
-    border: var(--Branco);
+    background: var(--Dourado-suave);
+    border-color: transparent;
     color: var(--Azul-profundo);
-    font-weight: 900;
+    font-weight: 700;
+}
+
+.butao:active {
+    transform: scale(1.1);
 }
