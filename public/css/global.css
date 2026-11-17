@@ -73,6 +73,12 @@ Legendas 14 px
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--Titulos-principais);
 }
+
+.a {
+    text-decoration: none;
+    color: inherit; 
+    font-size: 1rem;
+ }
 /*
 button {
     cursor: pointer;
