@@ -7,9 +7,6 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--Branco);
-
-
-
 }
 
 .logo {
@@ -113,14 +110,15 @@ li:hover,
 }
 
 .cadastro {
+        margin-right: 1.8rem;
     background-color: var(--Branco);
     color: var(--Azul-profundo);
     font-size: 0.7rem;
     font-weight: 700;
     font-family: var(--Botoes-e-menu);
-    padding: 0.5rem 0.8rem;
-    border-radius: 1rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     border: 1px solid var(--Dourado-suave);
     transition: all ease 0.3s;
 }

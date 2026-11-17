@@ -10,28 +10,22 @@
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
-  <link rel="stylesheet" href="../public/css/index.css">
   <link rel="stylesheet" href="../public/css/navbar_branco.css">
-  <link rel="stylesheet" href="/public/login.html">
-  <link rel="stylesheet" href="/public/simulador.html">
+  <link rel="stylesheet" href="../public/css/footer_azul.css">
+  <link rel="stylesheet" href="./../public/css/cadastroLogin/cadastro.css">
+
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
   <script src="./js/sessao.js"></script>
-
-  <link rel="stylesheet" href="./css/estilo.css" />
-  <link rel="stylesheet" href="../public/css/navbar_branco.css">
-  <link rel="stylesheet" href="./css/global.css">
-
-  <link rel="icon" href="./assets/icon/favicon2.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
 <body onload="listar()">
-  <!--header inicio-->
   <header class="navbar">
     <a href="/public/index.html" onclick="voltar_inicio()">
       <img class="logo" src="../public/assets/icon/logo_azul.png" alt="Devoc-DataTech" />
     </a>
     <div class="container_butoes">
+
       <nav>
         <ul>
           <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
@@ -41,69 +35,49 @@
       </nav>
       |
       <a href="/public/login.html">
-        <button class="entrar btn-primary cursor">
+        <button class="entrar">
           <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
           Entrar
         </button>
       </a>
       <a href="/public/cadastro.html">
-        <button class="cadastro btn-primary cursor">Cadastre-se</button>
+        <button class="cadastro">Cadastre-se</button>
       </a>
+    </div>
   </header>
-  <!--header fim-->
+  <section class="section-cadastro">
+    <section class="conteiner-esquerdo">
+      <section class="carrosel">
 
-  <div class="login">
-    <div class="alerta_erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-      </div>
-    </div>
-    <div class="container">
-      <div class="card card-cadastro">
-        <h2>Bem-vindo!</h2>
-        <div class="formulario">
-          <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
+        <div class="janela">
+          <div class="fila" id="fila">
+            <article class="slide">
+              <img src="../public/assets/imgs/sao-bento.jpg" alt="São bento">
+            </article>
+
+            <article class="slide">
+              <img src="../public/assets/imgs/_122941054_0.jpg" alt="São bento">
+            </article>
+
+            <article class="slide">
+              <img src="../public/assets/imgs/slides03.png" alt="São bento">
+            </article>
+
           </div>
-          <div class="campo">
-            <span>Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
-          </div>
-          <div class="campo">
-            <span>E-mail:</span>
-            <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
-          </div>
-          <div class="campo">
-            <span>Senha:</span>
-            <input id="senha_input" type="password" placeholder="******" />
-          </div>
-          <div class="campo">
-            <span>Confirmação da Senha:</span>
-            <input id="confirmacao_senha_input" type="password" placeholder="******" />
-          </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
         </div>
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
+      </section>
+    </section>
+  </section>
+  <footer class="footer">
 
-        <div id="div_erros_login"></div>
-      </div>
-    </div>
-  </div>
-
-  <!--footer inicio-->
-  <div class="footer">
-    <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023-2026</h4>
-    </div>
-  </div>
-  <!--footer fim-->
+    <a href="/public/index.html" onclick="voltar_inicio()">
+      <img class="imagem" src="../public/assets/icon/logo_branca.png" alt="Devoc-DataTech" />
+    </a>
+          <p class="frase">Um espaço de história, oração e devoção.</p>
+          <p class="frase imagem">© 2026</p>
+     
+      
+  </footer>  
 </body>
 
 </html>
