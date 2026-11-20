@@ -9,20 +9,20 @@
   <title>Devoc-DataTech | Cadastro</title>
 
   <link rel="stylesheet" href="./css/global.css">
-  <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
-  <link rel="stylesheet" href="../public/css/navbar_branco.css">
-  <link rel="stylesheet" href="../public/css/footer_azul.css">
-  <link rel="stylesheet" href="./../public/css/cadastroLogin/cadastro.css">
+  <link rel="icon" type="image/png" href="./assets/icon/icone.png">
+  <link rel="stylesheet" href="./css/navbar_branco.css">
+  <link rel="stylesheet" href="./css/footer_azul.css">
+  <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
 
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
   <script src="./js/sessao.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
-<body onload="listar()">
+<body>
   <header class="navbar">
-    <a href="/public/index.html" onclick="voltar_inicio()">
-      <img class="logo" src="../public/assets/icon/logo_azul.png" alt="Devoc-DataTech" />
+    <a href="./index.html" onclick="voltar_inicio()">
+      <img class="logo" src="./assets/icon/logo_azul.png" alt="Devoc-DataTech" />
     </a>
     <div class="container_butoes">
 
@@ -30,17 +30,17 @@
         <ul>
           <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
           <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
-          <li><a href="./src/pages/planos.html" class="linha">Quiz</a></li>
+          <li><a href="./quiz.html" class="linha">Quiz</a></li>
         </ul>
       </nav>
       |
-      <a href="/public/login.html">
+      <a href="./login.html">
         <button class="entrar">
           <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
           Entrar
         </button>
       </a>
-      <a href="/public/cadastro.html">
+      <a href="./cadastro.html">
         <button class="cadastro">Cadastre-se</button>
       </a>
     </div>
@@ -52,15 +52,47 @@
         <div class="janela">
           <div class="fila" id="fila">
             <article class="slide">
-              <img src="../public/assets/imgs/sao-bento.jpg" alt="São bento">
+              <img src="./assets/imgs/sao-bento.jpg" alt="Undefined">
             </article>
 
             <article class="slide">
-              <img src="../public/assets/imgs/_122941054_0.jpg" alt="São bento">
+              <img src="./assets/imgs/_122941054_0.jpg" alt="Undefined">
             </article>
 
             <article class="slide">
-              <img src="../public/assets/imgs/slides03.png" alt="São bento">
+              <img src="./assets/imgs/slides03.png" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/fff-1024x688.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/images (13).jfif" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/conversao-sao-paulo.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/nossa senhora aparecida.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/San Benito.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/download (1).jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/sao-bento.jpg" alt="Undefined">
             </article>
 
           </div>
@@ -78,39 +110,39 @@
       <label class="formulario-titulo">Nome
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt-nome-unidade" class="input" placeholder="Seu nome">
+      <input type="text" id="ipt_nome" class="input" placeholder="Seu nome">
 
       <label class="formulario-titulo">E-mail
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt-qtd-tanques-unidade" class="input" placeholder="Seu e-mail">
+      <input type="text" id="ipt_email" class="input" placeholder="Seu e-mail">
       <p class="subtitulo">Use um endereço de e-mail válido.</p>
 
       <label class="formulario-titulo">Senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt-logradouro-unidade" class="input" placeholder="Digite sua senha">
+      <input type="text" id="ipt_senha" class="input" placeholder="Digite sua senha">
 
       <label class="formulario-titulo">Confirmar senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt-logradouro-unidade" class="input" placeholder="Digite a senha novamente">
+      <input type="text" id="ipt_senha_hash" class="input" placeholder="Digite a senha novamente">
       <p class="subtitulo">As duas senhas devem ser iguais.</p>
 
-      <button class="butao">Cadastrar</button>
+      <button class="butao" onclick="cadastrar()">Cadastrar</button>
       
-      <p class="subtitulo">Já tem conta? <a  href="/public/login.html"> <b class="formulario-titulo"><u>Entre</u></b> </a> </p>
+      <p class="subtitulo">Já tem conta? <a  href="./login.html"> <b class="formulario-titulo"><u>Entre</u></b> </a> </p>
       
 
     </section>
   </section>
   <footer class="footer">
 
-    <a href="/public/index.html" onclick="voltar_inicio()">
-      <img class="imagem" src="../public/assets/icon/logo_branca.png" alt="Devoc-DataTech" />
+    <a href="./index.html" onclick="voltar_inicio()">
+      <img class="imagem" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
     </a>
     <p class="frase">Um espaço de história, oração e devoção.</p>
-    <p class="frase imagem">© 2026</p>
+    <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
 
 
   </footer>
@@ -120,51 +152,51 @@
 
 <script>
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
+  const fila = document.getElementById('fila');
+  const total = fila.children.length;
+  const largura = 456;
+  let atual = 0;
+
+  setInterval(() => {
+    atual = (atual + 1) % total;
+    fila.style.transition = 'transform 0.8s ease-in-out'
+    fila.style.transform = `translatex(-${atual * largura}px)`;
+  
+
+  if (atual === total - 1) {
+    setTimeout(() => {
+    fila.style.transition = 'none'
+    fila.style.transform = `translatex(0)`;
+    atual = 0;
+    }, 800);
+  }
+  }, 2500);
+  
 
   function cadastrar() {
     // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
-    var idEmpresaVincular
+    var nome = ipt_nome.value;
+    var email = ipt_email.value;
+    var senha = ipt_senha.value;
+    var senha_hash = ipt_senha_hash.value;
+   
 
     // Verificando se há algum campo em branco
     if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      codigoVar == ""
+      nome == "" ||
+      email == "" ||
+      senha == "" ||
+      senha_hash == "" 
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      
 
       finalizarAguardar();
       return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
     }
 
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].id
-        console.log("Código de ativação válido.");
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        finalizarAguardar();
-      }
-    }
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -175,60 +207,30 @@
       body: JSON.stringify({
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
+        nomeServer: nome,
+        emailServer: email,
+        senhaServer: senha,
+        senha_hashServer: senha_hash
       }),
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
-
         if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "./login.html";
           }, "2000");
 
           limparFormulario();
-          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
+        
       });
 
     return false;
-  }
-
-  // Listando empresas cadastradas 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresasCadastradas.push(empresa);
-
-            console.log("listaEmpresasCadastradas")
-            console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
-
-  function sumirMensagem() {
-    cardErro.style.display = "none";
   }
 </script>
