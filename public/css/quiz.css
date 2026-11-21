@@ -1,10 +1,13 @@
+body {
+  background: var( --Marfim);
+}
 .section-quiz {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 3rem 5rem 2.5rem 5rem;
   align-items: end;
   gap: 1.5rem;
+  background: var( --Marfim);
 }
 
 
@@ -39,10 +42,15 @@
   border-top: 1px solid rgba(20, 40, 75, 0.14);
   border-bottom: 1px solid rgba(20, 40, 75, 0.14);
 }
+.perguntas {
+  display: flex;
+  padding: 0 4rem 0 4rem;
+  align-items: flex-end;
+}
 
 .introducao {
   display: flex;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 0 2rem 0 2rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.6rem;
@@ -69,13 +77,13 @@
 .formulario {
   display: flex;
   width: 100%;
-  padding: 2.5rem;
+  padding: 5.5rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3.5rem;
+  gap: 2.5rem;
 
   border-radius: 0.75rem;
-  background: var(--Branco);
+  background: var(var( --Marfim));
   box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
 }
 
@@ -140,24 +148,26 @@ li:hover,
 
 /* ---------- 1) Container geral: coluna do quiz + coluna lateral ---------- */
 .quiz {
- display: flex;
+  display: flex;
   width: 100%;
-  padding: 0 2rem 3rem 2rem;
+  padding: 0 1rem 3rem 1rem;
   flex-direction: row;
   align-self: stretch;
   justify-content: space-between;
-  gap: 3.5rem;
+  gap: 1.5rem;
   border-radius: 0.75rem;
-  background: var(--Branco);
-  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+  background: var( --Marfim);
+  
 }
 
 /* ---------- 2) Cartão branco (mesmo estilo do .formulario do seu site) ---------- */
 .quiz .card {
+
+  width: 38rem;
   background: var(--Branco);
-  border-radius: 0.75rem;
-  padding: 2.5rem;
-  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.20);
 }
 
 /* ---------- 3) Linha do topo: "Pergunta 4 de 9" + "Sair do quiz" ---------- */
@@ -166,7 +176,8 @@ li:hover,
   justify-content: space-between;
   align-items: center;
   font-family: var(--Legendas-e-avisos);
-  font-size: 0.875rem;              /* legendas: 14px */
+  font-size: 0.875rem;
+  /* legendas: 14px */
   font-weight: 700;
   color: var(--Cinza-medio);
 }
@@ -189,7 +200,8 @@ li:hover,
 /* ---------- 4) Barra de progresso (9 segmentos) ---------- */
 .quiz .steps {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);   /* troque o 9 se mudar o nº de perguntas */
+  grid-template-columns: repeat(9, 1fr);
+  /* troque o 9 se mudar o nº de perguntas */
   gap: 0.5rem;
   margin: 0.75rem 0 2rem;
 }
@@ -201,21 +213,28 @@ li:hover,
   transition: background-color 0.3s ease;
 }
 
-.quiz .steps i.done { background: var(--Azul-profundo); }
-.quiz .steps i.now  { background: var(--Dourado-suave); }
+.quiz .steps i.done {
+  background: var(--Azul-profundo);
+}
+
+.quiz .steps i.now {
+  background: var(--Dourado-suave);
+}
 
 /* ---------- 5) Etiqueta e título da pergunta ---------- */
 .quiz .tag {
   font-family: var(--Botoes-e-menu);
   font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.0525rem;       /* mesmo espaçamento do .texto do quiz.css */
+  letter-spacing: 0.0525rem;
+  /* mesmo espaçamento do .texto do quiz.css */
   color: var(--Azul-profundo);
 }
 
 .quiz h1 {
   font-family: var(--Titulos-principais);
-  font-size: 2.5rem;               /* H2 do seu guia: 40px */
+  font-size: 2.5rem;
+  /* H2 do seu guia: 40px */
   font-weight: 700;
   line-height: 1.15;
   color: var(--Azul-profundo);
@@ -274,7 +293,11 @@ li:hover,
   border: 1.5px solid var(--Azul-profundo);
   color: var(--Azul-profundo);
 }
-.quiz .opt.sel .dot { border-color: var(--Azul-profundo); }
+
+.quiz .opt.sel .dot {
+  border-color: var(--Azul-profundo);
+}
+
 .quiz .opt.sel .dot::after {
   content: "";
   width: 0.5rem;
@@ -284,9 +307,19 @@ li:hover,
 }
 
 /* depois de confirmar */
-.quiz .opt.right { border: 2px solid var(--sucesso); background: transparent; }
-.quiz .opt.wrong { border: 2px solid var(--erro);    background: transparent; }
-.quiz .opt:disabled { cursor: default; }
+.quiz .opt.right {
+  border: 2px solid var(--sucesso);
+  background: transparent;
+}
+
+.quiz .opt.wrong {
+  border: 2px solid var(--erro);
+  background: transparent;
+}
+
+.quiz .opt:disabled {
+  cursor: default;
+}
 
 /* ---------- 7) Feedback (Correto / Não foi dessa vez) ---------- */
 .quiz .feedback {
@@ -296,8 +329,14 @@ li:hover,
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-.quiz .feedback b.ok  { color: var(--sucesso); }
-.quiz .feedback b.bad { color: var(--erro); }
+
+.quiz .feedback b.ok {
+  color: var(--sucesso);
+}
+
+.quiz .feedback b.bad {
+  color: var(--erro);
+}
 
 /* ---------- 8) Botões Voltar / Confirmar ---------- */
 .quiz .actions {
@@ -313,31 +352,43 @@ li:hover,
   border: 1px solid var(--Azul-profundo);
   border-radius: 0.5rem;
   font-family: var(--Botoes-e-menu);
-  font-size: 1rem;                 /* botões e menu: 16px */
+  font-size: 1rem;
+  /* botões e menu: 16px */
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease,
-              border-color 0.2s ease, transform 0.1s ease;
+    border-color 0.2s ease, transform 0.1s ease;
 }
 
 .quiz .btn.ghost {
   background: var(--Branco);
   color: var(--Azul-profundo);
 }
-.quiz .btn.ghost:hover:not(:disabled) { background: var(--Azul-claro); }
+
+.quiz .btn.ghost:hover:not(:disabled) {
+  background: var(--Azul-claro);
+}
 
 .quiz .btn.main {
   background: var(--Azul-profundo);
   color: var(--Branco);
-  border-color: var(--Dourado-suave);     /* borda dourada, como no seu botão principal */
+  border-color: var(--Dourado-suave);
+  /* borda dourada, como no seu botão principal */
 }
+
 .quiz .btn.main:hover:not(:disabled) {
   background: var(--Dourado-suave);
   color: var(--Azul-profundo);
 }
 
-.quiz .btn:active:not(:disabled) { transform: scale(0.98); }
-.quiz .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.quiz .btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.quiz .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 /* contorno dourado para quem navega pelo teclado (Tab) */
 .quiz .opt:focus-visible,
@@ -355,11 +406,13 @@ li:hover,
 }
 
 /* ---------- 9) Coluna lateral: "Três histórias, um percurso" ---------- */
-.quiz aside .card { padding: 1.5rem; }
+.quiz aside .card {
+  padding: 1.5rem;
+}
 
 .quiz aside h2 {
   font-family: var(--Subtitulos);
-  font-size: 1.75rem;              /* H3 do seu guia: 28px */
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.15;
   color: var(--Azul-profundo);
@@ -367,11 +420,24 @@ li:hover,
 }
 
 .quiz .story {
-  padding: 0.75rem;
+  width: 27rem;
+  height: 6.5rem;
+  padding: 0.55rem;
   margin-bottom: 0.375rem;
   border-radius: 0.5rem;
 }
-.quiz .story.now { background: var(--Azul-claro); }
+
+.quiz .info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.quiz .story.now {
+  background: var(--Azul-claro);
+}
 
 .quiz .story b {
   display: block;
@@ -379,6 +445,7 @@ li:hover,
   font-size: 0.9375rem;
   color: var(--Azul-profundo);
 }
+
 .quiz .story span {
   display: block;
   font-family: var(--Legendas-e-avisos);
@@ -396,7 +463,9 @@ li:hover,
 }
 
 /* ---------- 10) Tela de resultado ---------- */
-.quiz .result h1 { font-size: 2.75rem; }
+.quiz .result h1 {
+  font-size: 2.75rem;
+}
 
 .quiz .big {
   font-family: var(--Titulos-principais);
@@ -412,13 +481,52 @@ li:hover,
   justify-content: space-between;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(20, 40, 75, 0.14);
-  font-size: 1.125rem;             /* texto corrido: 18px */
+  font-size: 1.125rem;
+  /* texto corrido: 18px */
 }
+
+.quiz .story {
+  display: flex;
+  /* imagem e texto lado a lado */
+  align-items: center;
+  /* centraliza verticalmente */
+  gap: 0.75rem;
+  padding: 0.95rem;
+  margin-bottom: 0.375rem;
+  border-radius: 0.5rem;
+}
+
+.quiz .qimagem {
+  flex: none;
+  /* impede a imagem de ser espremida */
+  width: 2.75rem;
+  height: 3.25rem;
+  object-fit: cover;
+  /* preenche sem distorcer */
+  object-position: center top;
+  /* mantém o rosto do santo visível */
+  border-radius: 0.25rem;
+  border: 2px solid var(--Azul-profundo);
+}
+
+
 
 /* ---------- 11) Celular / telas estreitas ---------- */
 @media (max-width: 780px) {
-  .quiz { grid-template-columns: 1fr; padding: 2rem var(--horizontal-margin); }
-  .quiz .card { padding: 1.5rem; }
-  .quiz h1 { font-size: 1.875rem; }
-  .quiz .result h1 { font-size: 2.25rem; }
+  .quiz {
+    grid-template-columns: 1fr;
+    padding: 2rem var(--horizontal-margin);
+  }
+
+  .quiz .card {
+    padding: 2.5rem;
+  }
+
+  .quiz h1 {
+    font-size: 1.875rem;
+  }
+
+  .quiz .result h1 {
+    font-size: 2.25rem;
+  }
 }
