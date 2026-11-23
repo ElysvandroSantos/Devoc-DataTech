@@ -1,20 +1,34 @@
+/* =====================================================
+   DASHBOARD · Meu aprendizado
+   ===================================================== */
+
 body {
-  background: var( --Marfim);
+  background: var(--Marfim);
 }
-.section-quiz {
+
+/* ---------- Estrutura geral ---------- */
+.tela-graficos {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: end;
+  align-items: stretch;
   gap: 1.5rem;
-  background: var( --Marfim);
+  background: var(--Marfim);
 }
 
+.introducao {
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  align-self: stretch;
+}
 
+/* ---------- Textos base ---------- */
 .titulo {
   align-self: stretch;
   font-size: 2.5rem;
-  font-style: normal;
   font-weight: 500;
   font-family: var(--Titulos-principais);
   color: var(--Azul-profundo);
@@ -24,16 +38,27 @@ body {
   color: var(--Cinza-medio);
   font-family: var(--Subtitulos);
   font-size: 1rem;
-  font-style: normal;
   font-weight: 700;
-  left: 8rem;
   line-height: normal;
   padding: 0.2rem;
 }
 
+.subtitulo-pagina {
+  font-family: var(--Texto-corrido);
+  font-size: 1rem;
+  color: var(--Cinza-medio);
+  margin-top: 0.5rem;
+}
+
+.data-tentativa {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+/* ---------- Barra "Quiz | Meu aprendizado" ---------- */
 .navegador {
   display: flex;
-  height: 100%;
   height: 3rem;
   padding: 0 5rem;
   justify-content: space-between;
@@ -42,57 +67,206 @@ body {
   border-top: 1px solid rgba(20, 40, 75, 0.14);
   border-bottom: 1px solid rgba(20, 40, 75, 0.14);
 }
-.perguntas {
-  display: flex;
-  padding: 0 4rem 0 4rem;
-  align-items: flex-end;
-}
 
-.introducao {
+/* ---------- Linha "CONHECER É UM CAMINHO" + selo ---------- */
+.div_alta {
   display: flex;
-  padding: 0 2rem 0 2rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
-  align-self: stretch;
-}
-
-.introducao-form {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
 
-.texto {
-  color: var(--Cinza-escuro);
-  font-family: Outfit;
-  font-size: 0.95rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.05rem;
-  letter-spacing: 0.0525rem;
+.perguntas {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  background: var(--Azul-claro);
 }
 
-.formulario {
-  display: flex;
-  width: 100%;
-  padding: 5.5rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2.5rem;
+.perguntas p {
+  font-weight: 700;
+  color: var(--Azul-profundo);
+}
 
+/* ---------- Cabeçalho da página ---------- */
+.cabecalho-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Cards de resumo (3 colunas) ---------- */
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-self: stretch;
+  margin-top: 1.5rem;
+}
+
+.card-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem;
   border-radius: 0.75rem;
-  background: var(var( --Marfim));
+  background: var(--Branco);
   box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
 }
 
+.card-rotulo {
+  font-family: var(--Subtitulos);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--Azul-profundo);
+}
 
+.card-numero {
+  font-family: var(--Titulos-principais);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--Azul-profundo);
+}
 
+.card-detalhe {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+/* ---------- Painel: gráfico + histórias (2 colunas) ---------- */
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.5rem;
+  align-self: stretch;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Gráfico */
+.grafico {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--Branco);
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+}
+
+.titulo-grafico {
+  font-family: var(--Titulos-principais);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--Azul-profundo);
+}
+
+.legenda-grafico {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.75rem;
+  color: var(--Cinza-medio);
+}
+
+.grafico-canvas {
+  position: relative;   /* obrigatório para o Chart.js */
+  width: 100%;
+  height: 16rem;        /* controla a altura do gráfico */
+  margin-top: 1rem;
+}
+
+.nota-grafico {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(20, 40, 75, 0.14);
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.75rem;
+  color: var(--Cinza-medio);
+}
+
+/* Histórias */
+.historias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: var(--Branco);
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+}
+
+.historia {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(20, 40, 75, 0.14);
+}
+
+.historia:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.historia img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.historia-meta {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+.historia-titulo {
+  font-family: var(--Titulos-principais);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--Azul-profundo);
+}
+
+.historia-desc {
+  font-family: var(--Texto-corrido);
+  font-size: 0.85rem;
+  color: var(--Cinza-medio);
+}
+
+/* ".historia-texto .historia-link" é mais específico que o "li, a" abaixo */
+.historia-texto .historia-link {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  text-align: left;
+  color: var(--Azul-profundo);
+}
+
+.historia-texto .historia-link:hover {
+  color: var(--Dourado-suave);
+}
+
+/* ---------- Links e menu (regras globais da página) ---------- */
 li,
 a {
   font-size: 0.7rem;
-  flex-grow: 1rem;
   color: var(--Dourado-suave);
   font-family: var(--Botoes-e-menu);
   font-weight: 600;
@@ -131,7 +305,6 @@ a {
   width: 100%;
 }
 
-
 .icon:hover,
 .linha:hover,
 li:hover,
@@ -139,394 +312,24 @@ li:hover,
   color: var(--Dourado-suave);
 }
 
-/* ==========================================================
-   QUIZ — style.css
-   Depende do global.css (variáveis de cor/fonte e o reset "*").
-   Tudo está dentro de ".quiz" para não conflitar com o quiz.css
-   nem com as outras páginas do site.
-   ========================================================== */
-
-/* ---------- 1) Container geral: coluna do quiz + coluna lateral ---------- */
-.quiz {
-  display: flex;
-  width: 100%;
-  padding: 0 1rem 3rem 1rem;
-  flex-direction: row;
-  align-self: stretch;
-  justify-content: space-between;
-  gap: 1.5rem;
-  border-radius: 0.75rem;
-  background: var( --Marfim);
-  
-}
-
-/* ---------- 2) Cartão branco (mesmo estilo do .formulario do seu site) ---------- */
-.quiz .card {
-
-  width: 38rem;
-  background: var(--Branco);
-  border-radius: 0.85rem;
-  padding: 1rem;
-  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.20);
-}
-
-/* ---------- 3) Linha do topo: "Pergunta 4 de 9" + "Sair do quiz" ---------- */
-.quiz .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--Legendas-e-avisos);
-  font-size: 0.875rem;
-  /* legendas: 14px */
-  font-weight: 700;
-  color: var(--Cinza-medio);
-}
-
-.quiz .top button {
-  background: none;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: var(--Cinza-medio);
-  text-decoration: underline;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.quiz .top button:hover {
-  color: var(--Azul-profundo);
-}
-
-/* ---------- 4) Barra de progresso (9 segmentos) ---------- */
-.quiz .steps {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  /* troque o 9 se mudar o nº de perguntas */
-  gap: 0.5rem;
-  margin: 0.75rem 0 2rem;
-}
-
-.quiz .steps i {
-  height: 0.25rem;
-  border-radius: 0.125rem;
-  background: var(--Azul-claro);
-  transition: background-color 0.3s ease;
-}
-
-.quiz .steps i.done {
-  background: var(--Azul-profundo);
-}
-
-.quiz .steps i.now {
-  background: var(--Dourado-suave);
-}
-
-/* ---------- 5) Etiqueta e título da pergunta ---------- */
-.quiz .tag {
-  font-family: var(--Botoes-e-menu);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.0525rem;
-  /* mesmo espaçamento do .texto do quiz.css */
-  color: var(--Azul-profundo);
-}
-
-.quiz h1 {
-  font-family: var(--Titulos-principais);
-  font-size: 2.5rem;
-  /* H2 do seu guia: 40px */
-  font-weight: 700;
-  line-height: 1.15;
-  color: var(--Azul-profundo);
-  margin: 0.75rem 0 0.5rem;
-}
-
-.quiz .hint {
-  font-family: var(--Legendas-e-avisos);
-  font-size: 0.875rem;
-  color: var(--Cinza-medio);
-  margin-bottom: 1.5rem;
-}
-
-/* ---------- 6) Alternativas ---------- */
-.quiz .opts {
-  display: grid;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.quiz .opt {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-  width: 100%;
-  padding: 0.9rem 1rem;
-  text-align: left;
-  background: var(--Branco);
-  color: var(--Cinza-escuro);
-  border: 1px solid rgba(20, 40, 75, 0.14);
-  border-radius: 0.5rem;
-  font-family: var(--Texto-corrido);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.quiz .opt:hover:not(:disabled) {
-  border-color: var(--Azul-profundo);
-}
-
-/* bolinha do "radio" desenhada por CSS */
-.quiz .dot {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 1.125rem;
-  height: 1.125rem;
-  border: 1.5px solid var(--Cinza-medio);
-  border-radius: 50%;
-}
-
-/* selecionada (ainda não confirmada) */
-.quiz .opt.sel {
-  background: var(--Azul-claro);
-  border: 1.5px solid var(--Azul-profundo);
-  color: var(--Azul-profundo);
-}
-
-.quiz .opt.sel .dot {
-  border-color: var(--Azul-profundo);
-}
-
-.quiz .opt.sel .dot::after {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: var(--Azul-profundo);
-}
-
-/* depois de confirmar */
-.quiz .opt.right {
-  border: 2px solid var(--sucesso);
-  background: transparent;
-}
-
-.quiz .opt.wrong {
-  border: 2px solid var(--erro);
-  background: transparent;
-}
-
-.quiz .opt:disabled {
-  cursor: default;
-}
-
-/* ---------- 7) Feedback (Correto / Não foi dessa vez) ---------- */
-.quiz .feedback {
-  min-height: 1.25rem;
-  margin: -0.5rem 0 1.25rem;
-  font-family: var(--Texto-corrido);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-
-.quiz .feedback b.ok {
-  color: var(--sucesso);
-}
-
-.quiz .feedback b.bad {
-  color: var(--erro);
-}
-
-/* ---------- 8) Botões Voltar / Confirmar ---------- */
-.quiz .actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(20, 40, 75, 0.14);
-}
-
-.quiz .btn {
-  padding: 0.75rem 1.75rem;
-  border: 1px solid var(--Azul-profundo);
-  border-radius: 0.5rem;
-  font-family: var(--Botoes-e-menu);
-  font-size: 1rem;
-  /* botões e menu: 16px */
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease,
-    border-color 0.2s ease, transform 0.1s ease;
-}
-
-.quiz .btn.ghost {
-  background: var(--Branco);
-  color: var(--Azul-profundo);
-}
-
-.quiz .btn.ghost:hover:not(:disabled) {
-  background: var(--Azul-claro);
-}
-
-.quiz .btn.main {
-  background: var(--Azul-profundo);
-  color: var(--Branco);
-  border-color: var(--Dourado-suave);
-  /* borda dourada, como no seu botão principal */
-}
-
-.quiz .btn.main:hover:not(:disabled) {
-  background: var(--Dourado-suave);
-  color: var(--Azul-profundo);
-}
-
-.quiz .btn:active:not(:disabled) {
-  transform: scale(0.98);
-}
-
-.quiz .btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-/* contorno dourado para quem navega pelo teclado (Tab) */
-.quiz .opt:focus-visible,
-.quiz .btn:focus-visible,
-.quiz .top button:focus-visible {
-  outline: 3px solid var(--Dourado-suave);
-  outline-offset: 2px;
-}
-
-.quiz .foot {
-  margin-top: 1rem;
-  font-family: var(--Legendas-e-avisos);
-  font-size: 0.875rem;
-  color: var(--Cinza-medio);
-}
-
-/* ---------- 9) Coluna lateral: "Três histórias, um percurso" ---------- */
-.quiz aside .card {
-  padding: 1.5rem;
-}
-
-.quiz aside h2 {
-  font-family: var(--Subtitulos);
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.15;
-  color: var(--Azul-profundo);
-  margin-bottom: 1rem;
-}
-
-.quiz .story {
-  width: 27rem;
-  height: 6.5rem;
-  padding: 0.55rem;
-  margin-bottom: 0.375rem;
-  border-radius: 0.5rem;
-}
-
-.quiz .info {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: flex-start;
-  align-self: stretch;
-}
-
-.quiz .story.now {
-  background: var(--Azul-claro);
-}
-
-.quiz .story b {
-  display: block;
-  font-family: var(--Botoes-e-menu);
-  font-size: 0.9375rem;
-  color: var(--Azul-profundo);
-}
-
-.quiz .story span {
-  display: block;
-  font-family: var(--Legendas-e-avisos);
-  font-size: 0.8125rem;
-  color: var(--Cinza-medio);
-}
-
-.quiz .note {
-  margin-top: 0.75rem;
-  padding-top: 0.875rem;
-  border-top: 1px solid rgba(20, 40, 75, 0.14);
-  font-family: var(--Legendas-e-avisos);
-  font-size: 0.8125rem;
-  color: var(--Cinza-medio);
-}
-
-/* ---------- 10) Tela de resultado ---------- */
-.quiz .result h1 {
-  font-size: 2.75rem;
-}
-
-.quiz .big {
-  font-family: var(--Titulos-principais);
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--Dourado-suave);
-  margin: 0.5rem 0 1rem;
-}
-
-.quiz .rline {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(20, 40, 75, 0.14);
-  font-size: 1.125rem;
-  /* texto corrido: 18px */
-}
-
-.quiz .story {
-  display: flex;
-  /* imagem e texto lado a lado */
-  align-items: center;
-  /* centraliza verticalmente */
-  gap: 0.75rem;
-  padding: 0.95rem;
-  margin-bottom: 0.375rem;
-  border-radius: 0.5rem;
-}
-
-.quiz .qimagem {
-  flex: none;
-  /* impede a imagem de ser espremida */
-  width: 2.75rem;
-  height: 3.25rem;
-  object-fit: cover;
-  /* preenche sem distorcer */
-  object-position: center top;
-  /* mantém o rosto do santo visível */
-  border-radius: 0.25rem;
-  border: 2px solid var(--Azul-profundo);
-}
-
-
-
-/* ---------- 11) Celular / telas estreitas ---------- */
-@media (max-width: 780px) {
-  .quiz {
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .resumo,
+  .painel {
     grid-template-columns: 1fr;
-    padding: 2rem var(--horizontal-margin);
   }
 
-  .quiz .card {
-    padding: 2.5rem;
+  .navegador {
+    padding: 0 1rem;
   }
 
-  .quiz h1 {
-    font-size: 1.875rem;
+  .historia {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .quiz .result h1 {
-    font-size: 2.25rem;
+  .historia img {
+    width: 100%;
+    height: 12rem;
   }
-}
+} 

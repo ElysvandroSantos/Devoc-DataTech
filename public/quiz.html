@@ -10,7 +10,7 @@
 
   <script src="./js/sessao.js"></script>
 
-  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="./css/quiz.css">
   <link rel="stylesheet" href="./css/footer_azul.css">
   <link rel="stylesheet" href="./css/navbar_branco.css">
   <link rel="stylesheet" href="./css/global.css">
@@ -186,6 +186,7 @@
       e: "O santuário nacional fica em Aparecida, no interior de São Paulo."
     }
   ];
+    console.log('Recebendo Dados');
 
   // 2) ESTADO: o que o quiz "lembra" a cada momento
   let atual = 0;          // pergunta atual
@@ -226,8 +227,8 @@
     </div>
     <p class="foot">Este quiz é sobre conhecimento, não mede sua fé.</p>`;
     quizPath();
-  }
-
+  };
+  console.log('criação e configuração do quiz realizada');
   // 4) BARRA LATERAL: conta respondidas por história
   function quizPath() {
     $("path").innerHTML = santos.map((santo, si) => {
@@ -239,7 +240,8 @@
       return `<div class="story ${active ? 'now' : ''}"> <img class="qimagem" src="${santo.img}" alt="">
       <div class="info"> <b>${santo.nome}</b><span>${status}</span><span>Perguntas ${idx[0] + 1}–${idx[idx.length - 1] + 1}</span></div></div>`;
     }).join("");
-  }
+  };
+    console.log('estilização do quiz');
 
   // 5) AÇÕES
   function ponto(i) { alter_marcada = i; quiz(); }
@@ -247,6 +249,7 @@
   function proximo() { atual++; alter_marcada = null; quiz(); }
   function voltar() { if (atual > 0) { atual--; alter_marcada = null; quiz(); } }
   function reinicio() { atual = 0; alter_marcada = null; answers.length = 0; quiz(); }
+  console.log('Recebendo funções do quiz');
 
   function quizResult() {
     const hits = answers.filter((a, i) => a === perguntas[i].a).length;
@@ -260,7 +263,8 @@
     <p class="foot">Este quiz é sobre conhecimento, não mede sua fé.</p>
     <div class="actions" style="border:0;padding-top:12px"><span></span><button class="btn main" onclick="reinicio()">Refazer o quiz</button></div></div>`;
     quizPath();
-  }
+  };
+  console.log('Resultado do quiz mostrado');
   quiz();
 
 
