@@ -1,0 +1,335 @@
+/* =====================================================
+   DASHBOARD · Meu aprendizado
+   ===================================================== */
+
+body {
+  background: var(--Marfim);
+}
+
+/* ---------- Estrutura geral ---------- */
+.tela-graficos {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+  background: var(--Marfim);
+}
+
+.introducao {
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  align-self: stretch;
+}
+
+/* ---------- Textos base ---------- */
+.titulo {
+  align-self: stretch;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--Titulos-principais);
+  color: var(--Azul-profundo);
+}
+
+.subtitulo {
+  color: var(--Cinza-medio);
+  font-family: var(--Subtitulos);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.2rem;
+}
+
+.subtitulo-pagina {
+  font-family: var(--Texto-corrido);
+  font-size: 1rem;
+  color: var(--Cinza-medio);
+  margin-top: 0.5rem;
+}
+
+.data-tentativa {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+/* ---------- Barra "Quiz | Meu aprendizado" ---------- */
+.navegador {
+  display: flex;
+  height: 3rem;
+  padding: 0 5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-top: 1px solid rgba(20, 40, 75, 0.14);
+  border-bottom: 1px solid rgba(20, 40, 75, 0.14);
+}
+
+/* ---------- Linha "CONHECER É UM CAMINHO" + selo ---------- */
+.div_alta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.perguntas {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  background: var(--Azul-claro);
+}
+
+.perguntas p {
+  font-weight: 700;
+  color: var(--Azul-profundo);
+}
+
+/* ---------- Cabeçalho da página ---------- */
+.cabecalho-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Cards de resumo (3 colunas) ---------- */
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-self: stretch;
+  margin-top: 1.5rem;
+}
+
+.card-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--Branco);
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+}
+
+.card-rotulo {
+  font-family: var(--Subtitulos);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--Azul-profundo);
+}
+
+.card-numero {
+  font-family: var(--Titulos-principais);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--Azul-profundo);
+}
+
+.card-detalhe {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+/* ---------- Painel: gráfico + histórias (2 colunas) ---------- */
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.5rem;
+  align-self: stretch;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Gráfico */
+.grafico {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--Branco);
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+}
+
+.titulo-grafico {
+  font-family: var(--Titulos-principais);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--Azul-profundo);
+}
+
+.legenda-grafico {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.75rem;
+  color: var(--Cinza-medio);
+}
+
+.grafico-canvas {
+  position: relative;   /* obrigatório para o Chart.js */
+  width: 100%;
+  height: 16rem;        /* controla a altura do gráfico */
+  margin-top: 1rem;
+}
+
+.nota-grafico {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(20, 40, 75, 0.14);
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.75rem;
+  color: var(--Cinza-medio);
+}
+
+/* Histórias */
+.historias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: var(--Branco);
+  box-shadow: 0 8px 24px 0 rgba(34, 34, 34, 0.05);
+}
+
+.historia {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(20, 40, 75, 0.14);
+}
+
+.historia:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.historia img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.historia-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.historia-meta {
+  font-family: var(--Legendas-e-avisos);
+  font-size: 0.8rem;
+  color: var(--Cinza-medio);
+}
+
+.historia-titulo {
+  font-family: var(--Titulos-principais);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--Azul-profundo);
+}
+
+.historia-desc {
+  font-family: var(--Texto-corrido);
+  font-size: 0.85rem;
+  color: var(--Cinza-medio);
+}
+
+/* ".historia-texto .historia-link" é mais específico que o "li, a" abaixo */
+.historia-texto .historia-link {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  text-align: left;
+  color: var(--Azul-profundo);
+}
+
+.historia-texto .historia-link:hover {
+  color: var(--Dourado-suave);
+}
+
+/* ---------- Links e menu (regras globais da página) ---------- */
+li,
+a {
+  font-size: 0.7rem;
+  color: var(--Dourado-suave);
+  font-family: var(--Botoes-e-menu);
+  font-weight: 600;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.1s;
+}
+
+.linha {
+  font-size: 0.7rem;
+  color: var(--Branco);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.selecionado {
+  color: var(--Branco);
+  border-bottom: 3px solid var(--Dourado-suave);
+}
+
+.linha::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--Dourado-suave);
+  transition: width 0.3s ease-in-out;
+}
+
+.linha:hover::after {
+  width: 100%;
+}
+
+.icon:hover,
+.linha:hover,
+li:hover,
+.entrar:hover {
+  color: var(--Dourado-suave);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .resumo,
+  .painel {
+    grid-template-columns: 1fr;
+  }
+
+  .navegador {
+    padding: 0 1rem;
+  }
+
+  .historia {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .historia img {
+    width: 100%;
+    height: 12rem;
+  }
+} 

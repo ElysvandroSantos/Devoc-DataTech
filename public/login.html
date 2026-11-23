@@ -1,57 +1,229 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devoc-DataTech</title>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
-    <link rel="stylesheet" href="../public/css/index.css">
-    <link rel="stylesheet" href="../public/css/navbar_branco.css">
-    <link rel="stylesheet" href="/public/login.html">
-    <link rel="stylesheet" href="/public/simulador.html">
-    <link rel="stylesheet" href="./../public/css/cadastroLogin/login.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
-    <script src="./js/sessao.js"></script>
+  <title>Devoc-DataTech | Cadastro</title>
 
-    <link rel="stylesheet" href="./css/estilo.css" />
-    <link rel="stylesheet" href="../public/css/navbar_branco.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="icon" type="image/png" href="./assets/icon/icone.png">
+  <link rel="stylesheet" href="./css/navbar_branco.css">
+  <link rel="stylesheet" href="./css/footer_azul.css">
+  <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
+
+  <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
+  <script src="./js/sessao.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
 <body>
-    <header class="navbar">
-        <a href="/public/index.html" onclick="voltar_inicio()">
-            <img class="logo" src="../public/assets/icon/logo_azul.png" alt="Devoc-DataTech" />
-        </a>
-        <div class="container_butoes">
+  <header class="navbar">
+    <a href="./index.html" onclick="voltar_inicio()">
+      <img class="logo" src="./assets/icon/logo_azul.png" alt="Devoc-DataTech" />
+    </a>
+    <div class="container_butoes">
 
-            <nav>
-                <ul>
-                    <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
-                    <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
-                    <li><a href="./src/pages/planos.html" class="linha">Quiz</a></li>
-                </ul>
-            </nav>
-            |
-            <a href="/public/login.html">
-                <button class="entrar">
-                    <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
-                    Entrar
-                </button>
-            </a>
-            <a href="/public/cadastro.html">
-                <button class="cadastro">Cadastre-se</button>
-            </a>
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="linha ">Inicio</a></li>
+          <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+          <li><a href="./quiz.html" class="linha">Quiz</a></li>
+        </ul>
+      </nav>
+      |
+      <a href="./login.html">
+        <button class="entrar">
+          <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
+          Entrar
+        </button>
+      </a>
+      <a href="./cadastro.html">
+        <button class="cadastro">Cadastre-se</button>
+      </a>
+    </div>
+  </header>
+  <section class="section-cadastro">
+    <section class="conteiner-esquerdo">
+      <section class="carrosel">
+
+        <div class="janela">
+          <div class="fila" id="fila">
+            <article class="slide">
+              <img src="./assets/imgs/sao-bento.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/_122941054_0.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/slides03.png" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/fff-1024x688.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/images (13).jfif" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/conversao-sao-paulo.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/nossa senhora aparecida.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/San Benito.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/download (1).jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/sao-bento.jpg" alt="Undefined">
+            </article>
+
+          </div>
         </div>
-    </header>
-    <section class="section-historia">
+      </section>
+      <p class="subtitulo">UM TEMPO PARA A FÉ</p>
+      <span class="titulo">Toda caminhada começa com um primeiro passo.</span>
+      <p class="subtitulo">Histórias que atravessam o tempo e encontram sentido na simplicidade de cada dia.</p>
+    </section>
+    <section class="conteiner-formulario">
+      <p class="subtitulo"><b>BEM-VINDO DE VOLTA</b></p>
+      <span class="titulo-conta">Entrar</span>
+      <p class="subtitulo">Continue sua visita ao Devoc-DataTech.</p>
+
+      <label class="formulario-titulo">E-mail
+        <span class="campo-obrigatorio">*</span>
+      </label>
+      <input type="text" id="email_input" class="input" placeholder="Seu e-mail">
+
+      <label class="formulario-titulo">Senha
+        <span class="campo-obrigatorio">*</span>
+      </label>
+      <input type="text" id="senha_input" class="input" placeholder="Digite sua senha">
+      
+
+      <button onclick="autenticar()" class="butao">Entrar</button>
+      
+      <p class="subtitulo">Ainda não tem conta? 
+        <a  href="./cadastro.html"> <b class="formulario-titulo"><u>Cadastre-se</u></b> </a> </p>
+      
 
     </section>
+  </section>
+  <footer class="footer">
+
+    <a href="./index.html" onclick="voltar_inicio()">
+      <img class="imagem" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
+    </a>
+    <p class="frase">Um espaço de história, oração e devoção.</p>
+    <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
+
+
+  </footer>
 </body>
 
 </html>
+
+<script>
+
+
+  const fila = document.getElementById('fila');
+  const total = fila.children.length;
+  const largura = 456;
+  let atual = 0;
+
+  setInterval(() => {
+    atual = (atual + 1) % total;
+    fila.style.transition = 'transform 0.8s ease-in-out'
+    fila.style.transform = `translatex(-${atual * largura}px)`;
+  
+
+  if (atual === total - 1) {
+    setTimeout(() => {
+    fila.style.transition = 'none'
+    fila.style.transform = `translatex(0)`;
+    atual = 0;
+    }, 800);
+  }
+  }, 2500);
+  
+
+  function autenticar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaix
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    
+
+    // Verificando se há algum campo em branco
+    if (
+      emailVar == "" ||
+      senhaVar == "" 
+    ) {
+      
+     
+      return false;
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+       
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          resposta.json().then(json => {
+            sessionStorage.NOME_USUARIO = json.nome;
+
+            setTimeout(() => {
+              window.location = "./index.html";
+            }, "2000");
+
+          });
+
+
+          limparFormulario();
+          
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+
+
+</script>
