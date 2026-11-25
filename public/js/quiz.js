@@ -1,3 +1,9 @@
+const idUsuario = sessionStorage.getItem('ID_USUARIO');
+    
+  if (!idUsuario) {
+  window.location = './login.html';   // sem login, sem acesso
+}
+
 // DADOS: 
   const santos = [
     { nome: "São Bento", img: "./assets/imgs/sao-bento.jpg" },
@@ -153,7 +159,7 @@
   console.log('Recebendo funções do quiz');
 
   function quizResult() {
-  const idUsuario = sessionStorage.getItem('ID_USUARIO');
+   idUsuario = sessionStorage.getItem('ID_USUARIO');
     
   if (idUsuario) {
     

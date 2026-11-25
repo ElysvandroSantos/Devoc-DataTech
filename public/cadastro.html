@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/navbar_branco.css">
   <link rel="stylesheet" href="./css/footer_azul.css">
   <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
-
+  
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
@@ -79,7 +79,9 @@
             </article>
 
             <article class="slide">
-              <img src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png" alt="Undefined">
+              <img
+                src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png"
+                alt="Undefined">
             </article>
 
             <article class="slide">
@@ -106,32 +108,61 @@
       <span class="titulo-conta">Criar conta</span>
       <p class="subtitulo">Crie sua conta para continuar esta caminhada de fé.</p>
 
-      <label class="formulario-titulo">Nome
+      <label class="formulario-titulo" for="ipt_nome">Nome
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt_nome" class="input" placeholder="Seu nome">
+      <input type="text" id="ipt_nome" class="input" placeholder="Seu nome" onblur="validarNome()">
+      <p class="msg-erro" id="msg_nome"></p>
 
-      <label class="formulario-titulo">E-mail
+      <label class="formulario-titulo" for="ipt_email">E-mail
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt_email" class="input" placeholder="Seu e-mail">
-      <p class="subtitulo">Use um endereço de e-mail válido.</p>
+      <input type="text" id="ipt_email" class="input" placeholder="Seu e-mail" onblur="validarEmail()">
+      <p class="subtitulo" id="msg_email">Use um endereço de e-mail válido.</p>
 
-      <label class="formulario-titulo">Senha
+      <label class="formulario-titulo" for="ipt_senha_hash">Senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="password" id="ipt_senha_hash" class="input" placeholder="Digite a senha">
+      <input type="password" id="ipt_senha_hash" class="input" placeholder="Digite a senha"
+        oninput="validarSenha(); validarConfirmacao()">
+
+      <div class="senha-aviso" id="aviso_senha">
+
+        <span class="senha-texto" id="texto_senha">Use uma senha FORTE</span>
+
+        <span class="tooltip-area">
+
+          <button type="button" class="btn-info" aria-label="Critérios da senha" aria-describedby="tooltip_senha">
+            <i class="fa-solid fa-circle-info"></i>
+          </button>
+
+          <span class="tooltip" role="tooltip" id="tooltip_senha">
+
+            <span class="tooltip-titulo">Uma senha forte tem:</span>
+            <span class="criterio" id="crit_tamanho">Entre 8 e 25 caracteres</span>
+            <span class="criterio" id="crit_maiuscula">Pelo menos 1 letra maiúscula</span>
+            <span class="criterio" id="crit_numero">Pelo menos 1 número</span>
+            <span class="criterio" id="crit_simbolo">Pelo menos 1 símbolo, como . / ,</span>
+
+          </span>
+
+        </span>
+
+      </div>
 
       <label class="formulario-titulo">Confirmar senha
         <span class="campo-obrigatorio">*</span>
       </label>
       <input type="password" id="ipt_senha_confirm" class="input" placeholder="Digite a senha novamente">
-      <p class="subtitulo">As duas senhas devem ser iguais.</p>
+      <p class="msg-erro" id="msg_confirm"></p>
+
+
+
 
       <button class="butao" onclick="cadastrar()">Cadastrar</button>
-      
-      <p class="subtitulo">Já tem conta? <a  href="./login.html"> <b class="formulario-titulo"><u>Entre</u></b> </a> </p>
-      
+
+      <p class="subtitulo">Já tem conta? <a href="./login.html"> <b class="formulario-titulo"><u>Entre</u></b> </a> </p>
+
 
     </section>
   </section>
@@ -141,101 +172,14 @@
       <img class="imagem" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
     </a>
     <p class="frase">Um espaço de história, oração e devoção.</p>
-    <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
+    <p class="frase ">Feito Por: Elysvandro Santos © 2026</p>
 
 
   </footer>
-</body>
 
+  <script src="./js/cadastro.js"></script>
+</body>
+  
 </html>
 
-<script>
-/*
-div da senha para mostrar condições da senha
-<div class="passwordStatus">
-                    <div class="statusTop">
-                        <div>
-                            <span>Força da senha:</span>
-                            <strong id="pStatus">Fraca</strong>
-                        </div>
-
-                        <span id="strengthIcon" class="statsuIcon">
-                            <i class="fa-solid fa-shield"></i>
-                            <span class="hoverCard">
-                                <strong>Uma senha forte tem:</strong>
-                                • Mínimo de 8 caracteres<br>
-                                • Letra maiúscula<br>
-                                • Letra minúscula<br>
-                                • Número<br>
-                                • Caractere especial (@, #, !)<br>
-                                <br>
-                                Atenda a pelo menos 4 critérios para ser forte.
-                            </span>
-                        </span>
-                    </div>
-*/
-  const fila = document.getElementById('fila');
-  const total = fila.children.length;
-  const largura = 456;
-  let atual = 0;
-
-  setInterval(() => {
-    atual = (atual + 1) % total;
-    fila.style.transition = 'transform 0.8s ease-in-out'
-    fila.style.transform = `translatex(-${atual * largura}px)`;
-  
-
-  if (atual === total - 1) {
-    setTimeout(() => {
-    fila.style.transition = 'none'
-    fila.style.transform = `translatex(0)`;
-    atual = 0;
-    }, 800);
-  }
-  }, 2500);
-  
-  
-  function cadastrar() {
-    
-    var nome = ipt_nome.value;
-    var email = ipt_email.value;
-    var senha_hash = ipt_senha_hash.value;
-    var confirmacao = ipt_senha_confirm.value;
-   
-    
-
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        
-        nomeServer: nome,
-        emailServer: email,
-        senha_hashServer: senha_hash
-      }),
-      
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-        if (resposta.ok) {
-
-          setTimeout(() => {
-            window.location = "./login.html";
-          }, "2000");
-
-          limparFormulario();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        
-      });
-    }
-
-    
-</script>
 </html>

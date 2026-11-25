@@ -1,3 +1,9 @@
+const idUsuario = sessionStorage.ID_USUARIO;
+
+if (!idUsuario) {
+  window.location = './login.html';   // sem login, sem acesso
+}
+
 function setTexto(id, texto) {
   const el = document.getElementById(id);
   if (!el) {
@@ -30,11 +36,7 @@ function formatarData(texto) {
 
 
 
-const idUsuario = sessionStorage.ID_USUARIO;
 
-if (!idUsuario) {
-  window.location = './login.html';   // sem login, volta para a tela de login
-}
 
 const cores = [
   '#8B6B4A',
