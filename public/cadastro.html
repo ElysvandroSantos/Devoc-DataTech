@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
 
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
-  <script src="./js/sessao.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
@@ -28,7 +27,7 @@
 
       <nav>
         <ul>
-          <li><a href="./index.html" class="linha selecionado">Inicio</a></li>
+          <li><a href="./index.html" class="linha ">Inicio</a></li>
           <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
           <li><a href="./quiz.html" class="linha">Quiz</a></li>
         </ul>
@@ -121,12 +120,12 @@
       <label class="formulario-titulo">Senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt_senha" class="input" placeholder="Digite sua senha">
+      <input type="password" id="ipt_senha_hash" class="input" placeholder="Digite a senha">
 
       <label class="formulario-titulo">Confirmar senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="ipt_senha_hash" class="input" placeholder="Digite a senha novamente">
+      <input type="password" id="ipt_senha_confirm" class="input" placeholder="Digite a senha novamente">
       <p class="subtitulo">As duas senhas devem ser iguais.</p>
 
       <button class="butao" onclick="cadastrar()">Cadastrar</button>
@@ -195,38 +194,28 @@ div da senha para mostrar condições da senha
   }
   }, 2500);
   
-
+  
   function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
+    
     var nome = ipt_nome.value;
     var email = ipt_email.value;
-    var senha = ipt_senha.value;
     var senha_hash = ipt_senha_hash.value;
+    var confirmacao = ipt_senha_confirm.value;
    
+    
 
-    // Verificando se há algum campo em branco
-     console.log('erro na função cadastrar')
-      return false;
-    }
-
-
-    // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
+        
         nomeServer: nome,
         emailServer: email,
-        senhaServer: senha,
         senha_hashServer: senha_hash
       }),
+      
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
@@ -245,7 +234,8 @@ div da senha para mostrar condições da senha
         console.log(`#ERRO: ${resposta}`);
         
       });
+    }
 
-    return false;
+    
 </script>
 </html>

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
 
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
-  <script src="./js/sessao.js"></script>
+  
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
@@ -115,7 +115,7 @@
       <label class="formulario-titulo">Senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="senha_input" class="input" placeholder="Digite sua senha">
+      <input type="text" id="senha_hash_input" class="input" placeholder="Digite sua senha">
       
 
       <button onclick="autenticar()" class="butao">Entrar</button>
@@ -170,13 +170,13 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaix
     var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
+    var senha_hashVar = senha_hash_input.value;
     
 
     // Verificando se há algum campo em branco
     if (
       emailVar == "" ||
-      senhaVar == "" 
+      senha_hashVar == "" 
     ) {
       
      
@@ -194,7 +194,7 @@
         // Agora vá para o arquivo routes/usuario.js
        
         emailServer: emailVar,
-        senhaServer: senhaVar,
+        senha_hashServer: senha_hashVar,
         
       }),
     })
@@ -203,6 +203,7 @@
 
         if (resposta.ok) {
           resposta.json().then(json => {
+            sessionStorage.ID_USUARIO = json.id;
             sessionStorage.NOME_USUARIO = json.nome;
 
             setTimeout(() => {
