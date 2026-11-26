@@ -159,7 +159,6 @@ const idUsuario = sessionStorage.getItem('ID_USUARIO');
   console.log('Recebendo funções do quiz');
 
   function quizResult() {
-   idUsuario = sessionStorage.getItem('ID_USUARIO');
     
   if (idUsuario) {
     

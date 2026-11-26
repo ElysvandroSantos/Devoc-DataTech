@@ -1,4 +1,4 @@
-//CARROSEL
+
 const fila = document.getElementById('fila');
 const total = fila.children.length;
 const largura = 456;
@@ -70,7 +70,7 @@ function validarSenha(aoEnviar) {
     const numero = /\d/.test(senha);                      // algum número de 0 a 9
     const simbolo = /[^\p{L}\p{N}\s]/u.test(senha);       // algo que NÃO é letra, número nem espaço
 
-    // 2) No tooltip, critério cumprido recebe a classe "ok" (verde e riscado)
+    // critério cumprido recebe ok (verde e riscado)
     document.getElementById('crit_tamanho').classList.toggle('ok', tamanho);
     document.getElementById('crit_maiuscula').classList.toggle('ok', maiuscula);
     document.getElementById('crit_numero').classList.toggle('ok', numero);
