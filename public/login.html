@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="./css/navbar_branco.css">
   <link rel="stylesheet" href="./css/footer_azul.css">
   <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
-
+  
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
-  <script src="./js/sessao.js"></script>
+  
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
@@ -110,14 +110,15 @@
       <label class="formulario-titulo">E-mail
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="email_input" class="input" placeholder="Seu e-mail">
+      <input type="text" id="ipt_email" class="input" placeholder="Seu e-mail">
+      
 
       <label class="formulario-titulo">Senha
         <span class="campo-obrigatorio">*</span>
       </label>
-      <input type="text" id="senha_input" class="input" placeholder="Digite sua senha">
-      
+      <input type="password" id="ipt_senha_hash" class="input" placeholder="Digite sua senha">
 
+      <p class="msg-erro" id="msg_login"></p>
       <button onclick="autenticar()" class="butao">Entrar</button>
       
       <p class="subtitulo">Ainda não tem conta? 
@@ -136,94 +137,8 @@
 
 
   </footer>
+  <script src="./js/login.js"></script>
 </body>
 
 </html>
 
-<script>
-
-
-  const fila = document.getElementById('fila');
-  const total = fila.children.length;
-  const largura = 456;
-  let atual = 0;
-
-  setInterval(() => {
-    atual = (atual + 1) % total;
-    fila.style.transition = 'transform 0.8s ease-in-out'
-    fila.style.transform = `translatex(-${atual * largura}px)`;
-  
-
-  if (atual === total - 1) {
-    setTimeout(() => {
-    fila.style.transition = 'none'
-    fila.style.transform = `translatex(0)`;
-    atual = 0;
-    }, 800);
-  }
-  }, 2500);
-  
-
-  function autenticar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaix
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    
-
-    // Verificando se há algum campo em branco
-    if (
-      emailVar == "" ||
-      senhaVar == "" 
-    ) {
-      
-     
-      return false;
-    }
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/autenticar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-       
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          resposta.json().then(json => {
-            sessionStorage.NOME_USUARIO = json.nome;
-
-            setTimeout(() => {
-              window.location = "./index.html";
-            }, "2000");
-
-          });
-
-
-          limparFormulario();
-          
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-
-    return false;
-  }
-
-
-</script>

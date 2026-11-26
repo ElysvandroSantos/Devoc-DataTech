@@ -16,15 +16,21 @@ var HOST_APP = process.env.APP_HOST;
 var app = express();
 
 var usuarioRouter = require("./src/routes/usuarios");
+var dashboardRouter = require("./src/routes/dashboard.js");
+var kpisRouter = require("./src/routes/kpis.js");
+var quizRouter = require("./src/routes/quiz.js");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(cors());
 
 
 app.use("/usuarios", usuarioRouter);
+app.use("/dashboard", dashboardRouter);
+app.use("/kpis", kpisRouter);
+app.use("/quiz", quizRouter);
 
 
 app.listen(PORTA_APP, function () {

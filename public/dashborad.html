@@ -16,7 +16,6 @@
   <link rel="icon" type="image/png" href="./assets/icon/icone.png">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./js/sessao.js"></script>
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
   
 </head>
@@ -54,7 +53,7 @@
       <nav>
         <ul>
           <li><a href="./quiz.html" class="linha">Quiz</a></li>
-          <li><a href="./src/pages/servicos.html" class="linha">Meu aprendizado</a></li>
+          <li><a href="./dashborad.html" class="linha">Meu aprendizado</a></li>
         </ul>
       </nav>
       <p class="subtitulo">Seu espaço de conhecimento</p>
@@ -76,46 +75,73 @@
             Há sempre um detalhe novo para descobrir. Retome o que aprendeu e siga pelas histórias.
           </p>
         </div>
-        <p class="data-tentativa">Última tentativa · 28 out. 2026</p>
+        <p class="data-tentativa" id="data-tentativa">Nenhuma tentativa realizada</p>
       </div>
+      
 
       <section class="resumo">
         <article class="card-resumo">
           <p class="card-rotulo">Resultado mais recente</p>
-          <p class="card-numero" id="resultado-numero">7 de 9</p>
-          <p class="card-detalhe" id="resultado-detalhe">acertos no quiz · 78%</p>
+          <p class="card-numero" id="resultado-numero">0 de 0</p>
+          <p class="card-detalhe" id="resultado-detalhe">acertos no quiz · 00%</p>
         </article>
 
         <article class="card-resumo">
           <p class="card-rotulo">Quiz concluído</p>
-          <p class="card-numero" id="quiz-numero">1</p>
-          <p class="card-detalhe" id="quiz-detalhe">uma tentativa completa</p>
+          <p class="card-numero" id="quiz-numero">0</p>
+          <p class="card-detalhe" id="quiz-detalhe">sem tentativas</p>
         </article>
 
         <article class="card-resumo">
           <p class="card-rotulo">Média de acertos</p>
-          <p class="card-numero" id="media-numero">70%</p>
-          <p class="card-detalhe" id="media-detalhe">6,3/9 por quiz · 756/1080 respostas</p>
+          <p class="card-numero" id="media-numero">00%</p>
+          <p class="card-detalhe" id="media-detalhe">0/0 por quiz · 0/0 respostas</p>
         </article>
       </section>
+        </div>
 
       <section class="painel">
 
+        <div class="coluna-esquerda">
         <div class="grafico">
           <h2 class="titulo-grafico">O que você já conhece</h2>
-          <p class="legenda-grafico">Resultado da sua única tentativa concluída.</p>
-
+          <p class="legenda-grafico">Resultado da sua ultima tentativa concluída.</p>
+              <div class="perguntas" id="aviso-barras">
+          <p class="titulo-grafico">O grafico aparecera ao concluir um quiz!</p>
+        </div>
           <div class="grafico-canvas">
             <canvas id="graficojs"></canvas>
           </div>
-
+          
           <p class="nota-grafico" id="nota-grafico">
-            São 7 acertos em 9 perguntas. Este resultado registra conhecimento sobre as histórias, não mede sua fé.
+            São 7 acertos em 9 perguntas. 
+            Este resultado registra conhecimento sobre as histórias, não mede sua fé.
           </p>
+          
         </div>
 
-        <div class="historias">
-          <h2 class="titulo-grafico">Continue pelas histórias</h2>
+        <div class="grafico">
+         <h2 class="titulo-grafico">Como seus acertos se distribuem</h2>
+        <p class="legenda-grafico" id="pizza-subtitulo">Participação de cada santo no total de X acertos.</p>
+
+          <div class="pizza-conteudo">
+              <div class="perguntas" id="aviso-pizza">
+          <p class="titulo-grafico" id="aviso-pizza">O grafico aparecera ao concluir um quiz!</p>
+        </div>
+        <div class="pizza-canvas">
+          <canvas id="graficoPizza"></canvas>
+        </div>
+        <div class="pizza-legenda" id="pizza-legenda"></div>
+        </div>
+      
+      <p class="nota-grafico">Acertos do santo ÷ total de acertos. As fatias somam 100%.</p>
+    </div>
+    </div>
+
+    
+  </section>
+  <div class="grafico"><h2 class="titulo-grafico">Continue pelas histórias</h2></div>
+  <div class="historias">
 
           <article class="historia">
             <img src="./assets/imgs/slides02.png" alt="São Paulo Apóstolo">
@@ -123,7 +149,7 @@
               <p class="historia-meta">São Paulo · 2 de 3 acertos</p>
               <h3 class="historia-titulo">Um novo olhar sobre São Paulo</h3>
               <p class="historia-desc">Reencontre as viagens e as comunidades de sua missão.</p>
-              <a href="./src/pages/sao_paulo.html" class="historia-link">
+              <a href="./são_paulo.html" class="historia-link">
                 Ler sua história <i class="fa-solid fa-arrow-right-long"></i>
               </a>
             </div>
@@ -135,7 +161,7 @@
               <p class="historia-meta">Aparecida · 2 de 3 acertos</p>
               <h3 class="historia-titulo">Nas águas, o início de uma história</h3>
               <p class="historia-desc">Conheça o encontro da imagem de Aparecida, em 1717.</p>
-              <a href="./src/pages/aparecida.html" class="historia-link">
+              <a href="./aparecida.html" class="historia-link">
                 Ler sua história <i class="fa-solid fa-arrow-right-long"></i>
               </a>
             </div>
@@ -147,15 +173,12 @@
               <p class="historia-meta">São Bento · 3 de 3 acertos</p>
               <h3 class="historia-titulo">Oração e trabalho</h3>
               <p class="historia-desc">Conheça sua vida e o legado da Regra beneditina.</p>
-              <a href="./src/pages/sao_bento.html" class="historia-link">
+              <a href="./são_bento.html" class="historia-link">
                 Ler sua história <i class="fa-solid fa-arrow-right-long"></i>
               </a>
             </div>
           </article>
         </div>
-
-      </section>
-    </div>
   </section>
 
   <footer class="footer">

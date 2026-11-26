@@ -1,7 +1,7 @@
 .section-sao-paulo {
     display: flex;
     width: 100%;
-    padding: 9rem 4rem 7rem 4rem;
+    padding: 4rem 4rem 7rem 4rem;
     flex-direction: column;
     background: var(--Rosa-claro);
 }
@@ -63,7 +63,7 @@
     margin-right: 1.8rem;
     background-color: var(--Vermelho-vinho);
     color: var(--Branco);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: var(--Botoes-e-menu);
     font-weight: 700;
     padding: 12px 20px;
@@ -219,20 +219,21 @@
 }
 
 .navegacao {
+    width: 100%;
     display: flex;
     padding: 1rem;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
     gap: 1rem;
 }
 
 .conteiner-navegacao {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 90rem;
-    padding: 1rem;
     justify-content: space-between;
+    padding: 0.7rem;
     align-items: center;
-    gap: 2rem;
 
 }
 
@@ -259,7 +260,6 @@
     border: 1px solid var(--Dourado-suave);
     cursor: pointer;
     transition: all ease 0.3s;
-    margin-top: 1rem;
 }
 
 .butao-inicio:hover {
