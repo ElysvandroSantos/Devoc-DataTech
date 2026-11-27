@@ -1,10 +1,10 @@
 const idUsuario = sessionStorage.ID_USUARIO;
 
-/*
+
 if (!idUsuario) {
   window.location = './login.html';   // sem login, sem acesso
 }
-*/
+
 function setTexto(id, texto) {
   const el = document.getElementById(id);
   if (!el) {

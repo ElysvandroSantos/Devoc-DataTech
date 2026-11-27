@@ -1,9 +1,9 @@
 const idUsuario = sessionStorage.getItem('ID_USUARIO');
-    /*
+    
   if (!idUsuario) {
   window.location = './login.html';   // sem login, sem acesso
 }
-*/
+
 // DADOS: 
   const santos = [
     { nome: "São Bento", img: "./assets/imgs/sao-bento.jpg" },

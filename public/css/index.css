@@ -236,3 +236,7 @@ body {
     font-family: var(--Titulos-principais);
     color: var(--Branco);
 }
+
+html {
+    scroll-behavior: smooth;
+  }
