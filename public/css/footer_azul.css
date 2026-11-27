@@ -2,11 +2,9 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    position: absolute;
     padding: 1.2rem;
     justify-content: space-between;
-    text-align: start;
-    align-items: start;
+    align-items: center;
     background: var(--Azul-profundo);
     border-top: 1px solid var(--Branco);
 
@@ -17,16 +15,16 @@
     color: var(--Branco);
     font-family: var(--Subtitulos);
     font-style: normal;
+    font-size: 1rem;
     font-weight: 700;
-    left: 8rem;
     line-height: normal;
-    padding: 0.2rem;
+    padding: 0.8rem;
     
 }
 
 .imagem {
-   margin-left: 2rem;
-    width: 8.5rem;
+   
+    width: 8.5rem; 
     height: 2.5rem;
 }
 

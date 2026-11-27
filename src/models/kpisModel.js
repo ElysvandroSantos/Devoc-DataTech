@@ -32,17 +32,17 @@ function quizzesConcluidos(idUsuario) {
 }
 
 // Card 3: acertos e respostas de TODOS os usuários
-function mediaGeral() {
+function mediaGeral(idUsuario) {
     var instrucaoSql = `
         SELECT SUM(r.acertou) AS respostasCertas,
         COUNT(*) AS respostasTotal,
         COUNT(DISTINCT r.fk_quiz) AS totalQuizzes
         FROM resposta r
         JOIN quiz q ON q.id = r.fk_quiz
-        WHERE q.data_fim IS NOT NULL;
+        WHERE q.data_fim IS NOT NULL AND q.fk_usuario = ?;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    return database.executar(instrucaoSql, [idUsuario]);
 }
 
 module.exports = {

@@ -12,7 +12,7 @@ function buscarKpis(req, res) {
     Promise.all([
         kpisModel.ultimoResultado(idUsuario),
         kpisModel.quizzesConcluidos(idUsuario),
-        kpisModel.mediaGeral()
+        kpisModel.mediaGeral(idUsuario)
     ])
         .then(function (resultados) {
             var ultimo = resultados[0];       // lista com 0 ou 1 linha

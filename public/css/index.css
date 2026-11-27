@@ -5,9 +5,7 @@ body {
 .tela-inicial {
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 25rem 5rem 18rem;
+    padding: 16rem 5rem;
     background: linear-gradient(180deg, rgba(12, 9, 59, 0) 0%, rgba(16, 20, 73, 0.8) 74%, #090333 100%),
      url(../assets/imgs/Mosaico_devocional_com_título_original.png)
 }
@@ -68,7 +66,7 @@ body {
 
 .conteiner-baixo {
         width: 100%;
-    margin-left: 5rem;
+    padding-left: 5rem;
     flex-direction: column;
     display: flex;
     bottom: 4rem;
@@ -125,10 +123,11 @@ body {
 }
 
 .janela {
-     width: 88.5rem;
+     max-width: 88.5rem;
     height: 35.375rem;
     overflow: hidden;
 }
+
 
 .fila {             
     height: 100%;
@@ -142,10 +141,10 @@ body {
     flex-direction: column;
     text-align: center;
 }
-.slide img {
+.slide img{
     flex: 1;
     min-height: 0;
-    width: 40%;;
+    width: 50%;;
     aspect-ratio: 16 / 9;
     object-fit: fill ;
     border-radius: 5rem;

@@ -1,9 +1,10 @@
 const idUsuario = sessionStorage.ID_USUARIO;
 
+/*
 if (!idUsuario) {
   window.location = './login.html';   // sem login, sem acesso
 }
-
+*/
 function setTexto(id, texto) {
   const el = document.getElementById(id);
   if (!el) {
@@ -58,7 +59,7 @@ function montarCards(dados) {
     setTexto('resultado-detalhe', 'acertos no quiz · ' + porcentagem + '%');
     setTexto('data-tentativa', 'Última tentativa · ' + formatarData(dados.ultimo.dataFim));
   }
-
+ 
   // Card 2
   setTexto('quiz-numero', dados.quizzesConcluidos);
   setTexto('quiz-detalhe', dados.quizzesConcluidos === 1 ? 'uma tentativa completa' : 'tentativas completas');
@@ -66,17 +67,17 @@ function montarCards(dados) {
   // Card 3 (todos os usuários)
   const media = dados.media;
   if (media.totalQuizzes == 0) {
-    setTexto('media-numero', '—');
+    setTexto('media-numero', '0%');
     setTexto('media-detalhe', ' não há nenhum quiz feito');
   } else {
-    const mediaPercent = Math.round(media.respostasCertas / media.respostasTotal * 100);
+    const mediaPercent = (media.respostasCertas / media.respostasTotal * 100).toFixed(2);
     const mediaPorQuiz = media.respostasCertas / media.totalQuizzes;
     const perguntasPorQuiz = media.respostasTotal / media.totalQuizzes;
 
     setTexto('media-numero', mediaPercent + '%');
     setTexto('media-detalhe',
       mediaPorQuiz.toFixed(1).replace('.', ',') + '/' + perguntasPorQuiz +
-      ' por quiz · ' + media.respostasCertas + '/' + (dados.ultimo.total * dados.quizzesConcluidos) + ' respostas');
+      ' por quiz · ' + media.respostasCertas + '/' + (media.respostasTotal) + ' respostas');
   }
 }
 
