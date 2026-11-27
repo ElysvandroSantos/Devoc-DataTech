@@ -11,10 +11,10 @@
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="icon" type="image/png" href="../public/assets/icon/icone.png">
-    <link rel="stylesheet" href="./../public/css/navbar_branco.css">
-    <link rel="stylesheet" href="./../public/css/aparecida/footer_aparecida.css">
-    <link rel="stylesheet" href="/public/login.html">
-    <link rel="stylesheet" href="./../public/css/aparecida/aparecida.css">
+    <link rel="stylesheet" href="./css/navbar_branco.css">
+    <link rel="stylesheet" href="./css/footer_azul.css">
+    <link rel="stylesheet" href="./login.html">
+    <link rel="stylesheet" href="./css/devocao.css">
     <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,193 +28,284 @@
             <nav>
                 <ul>
                     <li><a href="./index.html" class="linha ">Inicio</a></li>
-                    <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+                    <li><a href="./devocao.html" class="linha">Minha devoção</a></li>
                     <li><a href="./quiz.html" class="linha">Quiz</a></li>
                 </ul>
             </nav>
             |
-            <a href="./login.html">
+            <a href="./login.html" id="get_entrar">
                 <button class="entrar">
                     <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
                     Entrar
                 </button>
             </a>
-            <a href="./cadastro.html">
+            <a href="./cadastro.html" id="get_cadastro">
                 <button class="cadastro">Cadastre-se</button>
             </a>
+            <button class="entrar" id="btn_sair" onclick="sair()" style="display:none">
+                <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                Sair
+            </button>
         </div>
     </header>
 
-    <section class="section-aparecida">
-        <div class="conteiner-inicial">
-            <div class="conteiner-aparecida">
-                <span class="subtitulo">FÉ, ACOLHIMENTO E ESPERANÇA</span>
-                <h1 class="titulo">Nossa Senhora Aparecida</h1>
-                <span class="subtitulo">
-                    <div class="barra"><br><br></div>
-                    Das águas do Paraíba do Sul, uma devoção que se tornou parte da história brasileira.
-                </span>
-                <a href="https://www.youtube.com/watch?v=zQgN8EYtZis" target="_blank">
-                    <button class="butao">Um momento de oração</button>
-                </a>
-            </div>
-            <div class="conteiner-imagem">
-                <img class="imagem" src="./../public/assets/imgs/images (5).jfif" alt="Aparecida">
-            </div>
+    <section class="minha-devocao">
+   
+        <span class="subtitulo">FÉ QUE SE TORNA MEMÓRIA</span>
+            <span class="titulo">Minha Devoção</span>
+        
+            <span class="frase-info">Encontro na fé um lugar de pausa e esperança. 
+                Nestas histórias, reconheço convites para viver com mais serenidade, 
+                coragem e cuidado. Este espaço reúne o que desejo guardar e 
+                compartilhar da minha caminhada.</span>
 
-        </div>
+            <p class="legenda">Relatos pessoais de exemplo, substituíveis. As imagens pessoais serão adicionadas pelo autor.</p>
+
+        </span>
 
     </section>
 
-    <div class="informacoes">
-        <span class="subtitulo">Celebração <br>
-            <p class="frase-info">12 de outubro</p>
-        </span>
+<!-- são bento -->
+    <section class="section-são-bento">
 
-        <span class="subtitulo">Devoção <br>
-            <p class="frase-info">Padroeira do Brasil</p>
+    <!-- COLUNA DA ESQUERDA: foto e frase -->
+    <div class="esquerda">
 
-        </span>
+<div class="janela1">
+          <div class="fila" id="fila">
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-bento1.jpg" alt="Undefined">
+            </article>
 
-        <span class="subtitulo">Origem <br>
-            <p class="frase-info">Imagem encontrada em 1717</p>
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-bento2.jpg" alt="Undefined">
+            </article>
 
-        </span>
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-bento3.jpg" alt="Undefined">
+            </article>
 
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-bento4.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-bento5.jpg" alt="Undefined">
+            </article>
+
+          </div>
+        </div>
+
+      <p class="frase-santo">A serenidade de viver um dia de cada vez.</p>
+      <div class="linha-dourada"></div>
+      <p class="nome">São Bento</p>
     </div>
 
-    <section class="section-historia">
-        <div class="historia">
-            <div class="conteiner-sao-bento">
-                <span class="subtitulo">SUA HISTÓRIA</span>
-                <h1 class="titulo">Das águas do rio ao coração de um povo</h1>
-                <span class="subtitulo">
-                    Em outubro de 1717, os pescadores Domingos Garcia,
-                     João Alves e Filipe Pedroso encontraram nas águas do rio Paraíba do Sul,
-                      na região de Guaratinguetá, uma pequena imagem de Nossa Senhora da Conceição: 
-                      primeiro o corpo, depois a cabeça.
-                    <br><br>
-                    Segundo a tradição, após o encontro da imagem, a pesca tornou-se abundante. 
-                    A devoção cresceu entre as famílias da região, reunidas para rezar diante da imagem. 
-                    Com o tempo, as visitas deram origem a capelas e a um grande santuário.
-                    <br><br>
-                    Em 1930, Nossa Senhora Aparecida foi proclamada padroeira do Brasil pelo papa Pio XI. 
-                    Celebrada em 12 de outubro, sua devoção reúne peregrinos de todo o país e expressa 
-                    uma história de confiança, acolhimento e esperança.
-                </span>
-            </div>
-            <div class="conteiner-imagem">
-                <img class="imagem" src="./../public/assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png" alt="Aparecida">
-            </div>
+    <!-- COLUNA DA DIREITA: textos -->
+    <div class="direita">
+      <h1>Por que São Bento é importante para mim</h1>
 
+      <p>
+        Em São Bento, encontro um convite ao equilíbrio. Rezar, trabalhar e acolher
+        são gestos simples que me ajudam a olhar para a rotina com mais presença.
+        Sua história me lembra que a paz também se constrói nas pequenas escolhas.
+      </p>
+
+      <!-- Oração favorita -->
+      <div class="oracao">
+        <p class="frase-santo">ORAÇÃO FAVORITA · EXEMPLO</p>
+        <p class="oracao-texto">“A cruz sagrada seja a minha luz.”</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- são paulo -->
+  <section class="section-são-paulo">
+
+    <!-- COLUNA DA ESQUERDA: foto e frase -->
+    <div class="esquerda">
+<div class="janela2">
+          <div class="fila" id="fila2">
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-paulo1.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-paulo2.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-paulo3.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-paulo4.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/sao-paulo5.jpg" alt="Undefined">
+            </article>
+
+          </div>
         </div>
 
-    </section>
+      <p class="frase-santo">A coragem de acolher um novo caminho.</p>
+      <div class="linha-dourada"></div>
+      <p class="nome">São Paulo Apostolo</p>
+    </div>
 
-    <section class="section-oracao">
-        <audio controls>
-            <source src="./../public/assets/Maezinha_do_Ceump3.mp3">
-        </audio>
-        <span style="font-size: 2rem; color: var(--Dourado-suave);"><i class="fa-solid fa-web-awesome"></i></span>
-        <span>
-            <br>
-            <h1 class="titulo-oracao">Canção de Nossa Senhora Aparecida</h1><br>
-            <p class="oracao">
-                Mãezinha do céu, eu não sei rezar
-                Eu só sei dizer: Eu quero te amar
-                <br>
-                Azul é seu manto, branco é seu véu
-                Mãezinha eu quero te ver lá no céu
-                Mãezinha eu quero te ver lá no céu
-                <br><br>
-                Mãezinha do céu, Mãe do puro amor
-                Jesus é teu Filho, eu também o sou
-                <br>
-                Azul é seu manto, branco é seu véu
-                Mãezinha eu quero te ver lá no céu
-                Mãezinha eu quero te ver lá no céu
-                <br><br>
-                Mãezinha do céu, vou te consagrar
-                Minha inocência, guarda sem cessar
-                <br>
-                Azul é seu manto, branco é seu véu
-                Mãezinha eu quero te ver lá no céu
-                Mãezinha eu quero te ver lá no céu
-            </p>
-        </span>
-        <div class="divisao"></div>
-        <p class="oracao">Reserve um instante de silêncio para a sua intenção.</p>
-    </section>
+    <!-- COLUNA DA DIREITA: textos -->
+    <div class="direita">
+      <h1>Por que São Paulo Apóstolo é importante para mim</h1>
 
-    <section class="section-curiosidades">
-        <h2 class="titulo">Curiosidades, Acontecimentos e grandes significados</h2>
-        <div class="conteiner-cards">
-            <div class="card1">
-                <div class="barra"></div>
-                <span class="frase-info">Uma pequena imagem</span>
-                <p class="subtitulo">
-                    Feita de terracota, a imagem tem cerca de 36 centímetros de altura. </p>
-            </div>
-            <div class="card2">
-                <div class="barra"></div>
-                <span class="frase-info">Três pescadores</span>
-                <p class="subtitulo">
-                    Domingos Garcia, João Alves e Filipe Pedroso estão ligados à origem da devoção. </p>
-            </div>
-            <div class="card3">
-                <div class="barra"></div>
-                <span class="frase-info"> Coroação em 1904
-                </span>
-                <p class="subtitulo">
-                    A coroação solene da imagem ocorreu em 8 de setembro de 1904.
-                </p>
-            </div>
-            <div class="card4">
-                <div class="barra"></div>
-                <span class="frase-info">Padroeira desde 1930</span>
-                <p class="subtitulo">
-                    O reconhecimento oficial consolidou uma devoção já espalhada pelo país. </div>
+      <p>
+        A história de Paulo me recorda que mudar de direção 
+        não é perder o caminho. Encontro em sua conversão 
+        um sinal de esperança: posso aprender, recomeçar e 
+        transformar aquilo que vivo em cuidado com outras pessoas.
+      </p>
+
+      <!-- Oração favorita -->
+      <div class="oracao">
+        <p class="frase-santo">ORAÇÃO FAVORITA · EXEMPLO</p>
+        <p class="oracao-texto">“São Paulo Apostolo, rogai por nós.”</p>
+      </div>
+    </div>
+
+
+  </section>
+
+    <!-- aparecida -->
+  <section class="section-aparecida">
+    
+    <!-- COLUNA DA ESQUERDA: foto e frase -->
+    <div class="esquerda">
+
+      <div class="janela3">
+          <div class="fila" id="fila3">
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/aparecida1.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/aparecida2.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/aparecida3.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/aparecida4.jpg" alt="Undefined">
+            </article>
+
+            <article class="slide">
+              <img src="./assets/imgs/minha-devocao/aparecida5.jpg" alt="Undefined">
+            </article>
+
+
+          </div>
         </div>
 
+      <p class="frase-santo">Um acolhimento que renova a esperança.</p>
+      <div class="linha-dourada"></div>
+      <p class="nome">Nossa Senhora Aparecida</p>
+    </div>
 
-        
+    <!-- COLUNA DA DIREITA: textos -->
+    <div class="direita">
+      <h1>Por que Nossa Senhora Aparecida é importante para mim</h1>
 
-    </section>
-    <section class="navegacao">
-        <div class="conteiner-navegacao">
-            <span class="nav">
-                <a href="./são_paulo.html">
-                    <p class="subtitulo"><i class="fa-solid fa-arrow-left-long"></i> Santo anterior</p>
-                    <p class="frase-info nav">São Paulo</p>
-                </a>
-            </span>
+      <p>
+        Em São Bento, encontro um convite ao equilíbrio. Rezar, trabalhar e acolher
+        são gestos simples que me ajudam a olhar para a rotina com mais presença.
+        Sua história me lembra que a paz também se constrói nas pequenas escolhas.
+      </p>
 
-            <a href="./index.html">
-                <button class="butao-inicio">Voltar ao Inicio</button>
-            </a>
-
-            <span class="nav">
-                <a href="./são_bento.html">
-                    <p class="subtitulo ">Próximo santo <i class="fa-solid fa-arrow-right-long"></i></p>
-                    <p class="frase-info nav">São Bento</p>
-                </a>
-            </span>
+      
+      <!-- Oração favorita -->
+      <div class="oracao">
+        <p class="frase-santo">ORAÇÃO FAVORITA · EXEMPLO</p>
+        <p >“Nossa Senhora Aparecida, rogai por nós.”</p>
+      </div>
+    </div>
 
 
-        </div>
-    </section>
+  </section>
+    <div mensagem></div>
 
     <footer class="footer">
 
-        <a href="/public/index.html" onclick="voltar_inicio()">
-            <img class="imagem-footer" src="../public/assets/icon/logo_branca.png" alt="Devoc-DataTech" />
-        </a>
+    <a href="./index.html" onclick="voltar_inicio()">
+      <img class="imagem" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
+    </a>
 
+    <p class="frase ">Feito Por: Elysvandro Santos © 2026</p>
 
-
-        <p class="frase ">Um espaço de história, oração e devoção.</p>
-        <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
-
-
-    </footer>
+  </footer>
+    <script src="./js/navbar.js"></script>
 </body>
+
+<script>
+
+const fila = document.getElementById('fila');
+const total = fila.children.length;
+const largura = 456;
+let atual = 0;
+
+setInterval(() => {
+    atual = (atual + 1) % total;
+    fila.style.transition = 'transform 0.8s ease-in-out'
+    fila.style.transform = `translatex(-${atual * largura}px)`;
+
+
+    if (atual === total - 1) {
+        setTimeout(() => {
+            fila.style.transition = 'none'
+            fila.style.transform = `translatex(0)`;
+            atual = 0;
+        }, 3500);
+    }
+}, 3500);
+
+const fila2 = document.getElementById('fila2');
+const total2 = fila2.children.length;
+let atual2 = 0;
+setInterval(() => {
+    atual2 = (atual2 + 1) % total2;
+    fila2.style.transition = 'transform 0.8s ease-in-out'
+    fila2.style.transform = `translatex(-${atual2 * largura}px)`;
+
+
+    if (atual2 === total2 - 1) {
+        setTimeout(() => {
+            fila2.style.transition = 'none'
+            fila2.style.transform = `translatex(0)`;
+            atual2 = 0;
+        }, 3500);
+    }
+}, 3500);
+
+const fila3 = document.getElementById('fila3');
+const total3 = fila.children.length;
+let atual3 = 0;
+setInterval(() => {
+    atual3 = (atual3 + 1) % total3;
+    fila3.style.transition = 'transform 0.8s ease-in-out'
+    fila3.style.transform = `translatex(-${atual * largura}px)`;
+
+
+    if (atual3 === total3 - 1) {
+        setTimeout(() => {
+            fila3.style.transition = 'none'
+            fila3.style.transform = `translatex(0)`;
+            atual3 = 0;
+        }, 3500);
+    }
+}, 3500);
+
+
+</script>
+
+</html>

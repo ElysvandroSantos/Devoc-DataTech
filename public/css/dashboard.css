@@ -374,3 +374,28 @@ li:hover,
 .entrar:hover {
   color: var(--Dourado-suave);
 }
+
+.btn{
+  margin-right: 1.8rem;
+    background-color: var(--Azul-profundo);
+    color: var(--Branco);
+    font-size: 0.7rem;
+    font-family: var(--Botoes-e-menu);
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--Azul-profundo);
+    cursor: pointer;
+    transition: all ease 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--Dourado-suave);
+  color: var(--Azul-profundo);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}

@@ -28,25 +28,33 @@
             <nav>
                 <ul>
                     <li><a href="./index.html" class="linha ">Inicio</a></li>
-                    <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+                    <li><a href="./devocao.html" class="linha">Minha devoção</a></li>
                     <li><a href="./quiz.html" class="linha">Quiz</a></li>
                 </ul>
             </nav>
             |
-            <a href="./login.html">
+            <a href="./login.html" id="get_entrar">
                 <button class="entrar">
                     <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
                     Entrar
                 </button>
             </a>
-            <a href="./cadastro.html">
+            <a href="./cadastro.html" id="get_cadastro">
                 <button class="cadastro">Cadastre-se</button>
             </a>
+            <button class="entrar" id="btn_sair" onclick="sair()" style="display:none">
+                <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                Sair
+            </button>
         </div>
     </header>
 
     <section class="section-aparecida">
         <div class="conteiner-inicial">
+            <div class="conteiner-imagem">
+                <img class="imagem" src="./assets/imgs/images (5).jfif" alt="Aparecida">
+            </div>
+            <p class="titulo">A serenidade de viver um dia de cada vez.</p>
             <div class="conteiner-aparecida">
                 <span class="subtitulo">FÉ, ACOLHIMENTO E ESPERANÇA</span>
                 <h1 class="titulo">Nossa Senhora Aparecida</h1>
@@ -58,9 +66,7 @@
                     <button class="butao">Um momento de oração</button>
                 </a>
             </div>
-            <div class="conteiner-imagem">
-                <img class="imagem" src="./assets/imgs/images (5).jfif" alt="Aparecida">
-            </div>
+            
 
         </div>
 
@@ -90,21 +96,23 @@
                 <h1 class="titulo">Das águas do rio ao coração de um povo</h1>
                 <span class="subtitulo">
                     Em outubro de 1717, os pescadores Domingos Garcia,
-                     João Alves e Filipe Pedroso encontraram nas águas do rio Paraíba do Sul,
-                      na região de Guaratinguetá, uma pequena imagem de Nossa Senhora da Conceição: 
-                      primeiro o corpo, depois a cabeça.
+                    João Alves e Filipe Pedroso encontraram nas águas do rio Paraíba do Sul,
+                    na região de Guaratinguetá, uma pequena imagem de Nossa Senhora da Conceição:
+                    primeiro o corpo, depois a cabeça.
                     <br><br>
-                    Segundo a tradição, após o encontro da imagem, a pesca tornou-se abundante. 
-                    A devoção cresceu entre as famílias da região, reunidas para rezar diante da imagem. 
+                    Segundo a tradição, após o encontro da imagem, a pesca tornou-se abundante.
+                    A devoção cresceu entre as famílias da região, reunidas para rezar diante da imagem.
                     Com o tempo, as visitas deram origem a capelas e a um grande santuário.
                     <br><br>
-                    Em 1930, Nossa Senhora Aparecida foi proclamada padroeira do Brasil pelo papa Pio XI. 
-                    Celebrada em 12 de outubro, sua devoção reúne peregrinos de todo o país e expressa 
+                    Em 1930, Nossa Senhora Aparecida foi proclamada padroeira do Brasil pelo papa Pio XI.
+                    Celebrada em 12 de outubro, sua devoção reúne peregrinos de todo o país e expressa
                     uma história de confiança, acolhimento e esperança.
                 </span>
             </div>
             <div class="conteiner-imagem">
-                <img class="imagem" src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png" alt="Aparecida">
+                <img class="imagem"
+                    src="./assets/imgs/historia-de-nossa-senhora-aparecida-dos-pescadores-a-padroeira-original-portalkairos.png"
+                    alt="Aparecida">
             </div>
 
         </div>
@@ -173,11 +181,12 @@
                 <div class="barra"></div>
                 <span class="frase-info">Padroeira desde 1930</span>
                 <p class="subtitulo">
-                    O reconhecimento oficial consolidou uma devoção já espalhada pelo país. </div>
+                    O reconhecimento oficial consolidou uma devoção já espalhada pelo país.
+            </div>
         </div>
 
 
-        
+
 
     </section>
     <section class="navegacao">
@@ -210,11 +219,10 @@
             <img class="imagem-footer" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
         </a>
 
-
-
-        <p class="frase ">Um espaço de história, oração e devoção.</p>
-        <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
-
+        <p class="frase">Feito Por: Elysvandro Santos © 2026</p>
 
     </footer>
+    <script src="./js/navbar.js"></script>
 </body>
+
+</html>

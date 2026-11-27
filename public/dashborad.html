@@ -31,20 +31,24 @@
       <nav>
         <ul>
           <li><a href="./index.html" class="linha">Inicio</a></li>
-          <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+          <li><a href="./devocao.html" class="linha">Minha devoção</a></li>
           <li><a href="./quiz.html" class="linha">Quiz</a></li>
         </ul>
       </nav>
       |
-      <a href="./login.html">
+      <a href="./login.html" id="get_entrar">
         <button class="entrar">
           <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
           Entrar
         </button>
       </a>
-      <a href="./cadastro.html">
+      <a href="./cadastro.html" id="get_cadastro">
         <button class="cadastro">Cadastre-se</button>
       </a>
+      <button class="entrar" id="btn_sair" onclick="sair()" style="display:none">
+        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+        Sair
+      </button>
     </div>
   </header>
    <section class="tela-graficos">
@@ -135,10 +139,15 @@
         </div>
       
       <p class="nota-grafico">Acertos do santo ÷ total de acertos. As fatias somam 100%.</p>
+      <a href="./quiz.html">
+          <button class="btn">Voltar para o Quiz</button>
+          </a>
     </div>
+    
     </div>
 
     
+
   </section>
   <div class="grafico"><h2 class="titulo-grafico">Continue pelas histórias</h2></div>
   <div class="historias">
@@ -146,7 +155,7 @@
           <article class="historia">
             <img src="./assets/imgs/slides02.png" alt="São Paulo Apóstolo">
             <div class="historia-texto">
-              <p class="historia-meta">São Paulo · 2 de 3 acertos</p>
+              <p class="historia-meta">São Paulo</p>
               <h3 class="historia-titulo">Um novo olhar sobre São Paulo</h3>
               <p class="historia-desc">Reencontre as viagens e as comunidades de sua missão.</p>
               <a href="./são_paulo.html" class="historia-link">
@@ -158,7 +167,7 @@
           <article class="historia">
             <img src="./assets/imgs/images (1).jfif" alt="Nossa Senhora Aparecida">
             <div class="historia-texto">
-              <p class="historia-meta">Aparecida · 2 de 3 acertos</p>
+              <p class="historia-meta">Aparecida</p>
               <h3 class="historia-titulo">Nas águas, o início de uma história</h3>
               <p class="historia-desc">Conheça o encontro da imagem de Aparecida, em 1717.</p>
               <a href="./aparecida.html" class="historia-link">
@@ -170,7 +179,7 @@
           <article class="historia">
             <img src="./assets/imgs/sao-bento.jpg" alt="São Bento">
             <div class="historia-texto">
-              <p class="historia-meta">São Bento · 3 de 3 acertos</p>
+              <p class="historia-meta">São Bento</p>
               <h3 class="historia-titulo">Oração e trabalho</h3>
               <p class="historia-desc">Conheça sua vida e o legado da Regra beneditina.</p>
               <a href="./são_bento.html" class="historia-link">
@@ -190,5 +199,7 @@
   </footer>
 
 <script src="./js/dashboard.js"></script>
+<script src="./js/navbar.js"></script>
 </body>
+
 </html>

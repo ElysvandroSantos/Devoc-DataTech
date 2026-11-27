@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/navbar_branco.css">
   <link rel="stylesheet" href="./css/footer_azul.css">
   <link rel="stylesheet" href="./css/cadastroLogin/cadastro.css">
-  
+
   <script src="https://kit.fontawesome.com/79924d81b1.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
@@ -28,20 +28,24 @@
       <nav>
         <ul>
           <li><a href="./index.html" class="linha ">Inicio</a></li>
-          <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+          <li><a href="./devocao.html" class="linha">Minha devoção</a></li>
           <li><a href="./quiz.html" class="linha">Quiz</a></li>
         </ul>
       </nav>
       |
-      <a href="./login.html">
+      <a href="./login.html" id="get_entrar">
         <button class="entrar">
           <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
           Entrar
         </button>
       </a>
-      <a href="./cadastro.html">
+      <a href="./cadastro.html" id="get_cadastro">
         <button class="cadastro">Cadastre-se</button>
       </a>
+      <button class="entrar" id="btn_sair" onclick="sair()" style="display:none">
+        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+        Sair
+      </button>
     </div>
   </header>
   <section class="section-cadastro">
@@ -178,8 +182,8 @@
   </footer>
 
   <script src="./js/cadastro.js"></script>
+  <script src="./js/navbar.js"></script>
 </body>
-  
-</html>
 
 </html>
+

@@ -8,7 +8,7 @@
 
   <title>Devoc-DataTech | São bento</title>
 
- 
+
 
   <link rel="stylesheet" href="./css/global.css">
   <link rel="icon" type="image/png" href="./assets/icon/icone.png">
@@ -29,20 +29,24 @@
       <nav>
         <ul>
           <li><a href="./index.html" class="linha ">Inicio</a></li>
-          <li><a href="./src/pages/servicos.html" class="linha">Minha devoção</a></li>
+          <li><a href="./devocao.html" class="linha">Minha devoção</a></li>
           <li><a href="./quiz.html" class="linha">Quiz</a></li>
         </ul>
       </nav>
       |
-      <a href="./login.html">
+      <a href="./login.html" id="get_entrar">
         <button class="entrar">
           <i class="fa-solid fa-arrow-right-to-bracket icon"></i>
           Entrar
         </button>
       </a>
-      <a href="./cadastro.html">
+      <a href="./cadastro.html" id="get_cadastro">
         <button class="cadastro">Cadastre-se</button>
       </a>
+      <button class="entrar" id="btn_sair" onclick="sair()" style="display:none">
+        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+        Sair
+      </button>
     </div>
   </header>
 
@@ -212,11 +216,10 @@
       <img class="imagem-footer" src="./assets/icon/logo_branca.png" alt="Devoc-DataTech" />
     </a>
 
-
-
-    <p class="frase ">Um espaço de história, oração e devoção.</p>
-    <p class="frase ">Feito Por: Elysvandro Santos  © 2026</p>
-
+    <p class="frase ">Feito Por: Elysvandro Santos © 2026</p>
 
   </footer>
+  <script src="./js/navbar.js"></script>
 </body>
+
+</html>
